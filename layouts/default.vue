@@ -13,7 +13,7 @@ function changeLang(selectedLang: string) {
 
 <template>
   <div class="lg:flex ">
-    <section class="bg-secondGray relative py-6 px-5 sm:min-w-[300px] lg:min-h-screen overflow-hidden transition-all duration-500" :style="{'max-height': menuOpen ? '901px' : '81px' }">
+    <section class="bg-secondGray relative py-6 px-5 sm:min-w-[300px] lg:min-h-screen overflow-hidden transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
           <span></span>
@@ -24,7 +24,7 @@ function changeLang(selectedLang: string) {
       <h6 class="text-[22px] text-center lg:mb-3 font-bold text-white whitespace-nowrap">
         Sultonkhan Ablakulav
       </h6>
-        <div class="py-2 transition-all duration-500" :style="{'opacity': menuOpen ? '1' : '0'}">
+        <div class="py-2 transition-all duration-500 lg:opacity-100 opacity-0" :class="{'opacity-100': menuOpen }">
           <div class="">
             <div class="w-[160px] h-[160px] mb-3 bg-firstGray text-white mx-auto rounded-full mb-3 flex justify-center items-center">
               <!--            <img src="../assets/images/my-picture.jpeg" class="w-[160px] rounded-full" alt="">-->
