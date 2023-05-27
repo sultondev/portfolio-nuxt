@@ -12,7 +12,7 @@ function changeLang(selectedLang: string) {
 </script>
 
 <template>
-  <div class="lg:flex ">
+  <div class="lg:flex text-textLight dark:bg-firstGray">
     <section class="bg-secondGray relative py-6 px-5 sm:min-w-[300px] lg:min-h-screen overflow-hidden transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
@@ -31,7 +31,7 @@ function changeLang(selectedLang: string) {
               <h6 class="text-7xl">S</h6>
             </div>
 
-            <p class="font-bold relative max-w-[260px] mx-auto lg:max-w-full mb-8 text-center text-white before:content-[''] before:block before:w-[4px] before:h-[100%] before:bg-white before:absolute before:l-[4px]">
+            <p class="font-light relative max-w-[260px] mx-auto lg:max-w-full mb-8 text-center text-white before:content-[''] before:block before:w-[2px] before:h-[100%] before:bg-white before:absolute before:l-[4px]">
               <span class="px-1 block w-[100%]">
                 We should never surrender
               </span>
@@ -131,7 +131,7 @@ function changeLang(selectedLang: string) {
           </div>
         </div>
     </section>
-    <div class="w-full h-full bg-firstGray min-h-screen">
+    <div class="w-full h-full  min-h-screen">
       <slot />
     </div>
   </div>

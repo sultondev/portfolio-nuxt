@@ -17,8 +17,13 @@ module.exports = {
                 primaryHover: '#40976f',
                 firstGray: '#111821',
                 secondGray: '#1e2a3a',
+                grayLighter: '#384f6c',
+                grayLightHover:'#415c7c',
                 primaryLight: '#317355',
+                textLight: 'hsla(0,0%,100%,0.95)',
                 grayLight: 'hsla(0,0%,100%,0.7)',
+                textDark: '#292929',
+                pDark: '#4e4e4e'
             }
         },
         screens: {

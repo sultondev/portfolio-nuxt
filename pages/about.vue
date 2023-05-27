@@ -1,3 +1,0 @@
-<template>
-  About me
-</template>

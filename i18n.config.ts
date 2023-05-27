@@ -14,7 +14,9 @@ export default defineI18nConfig(() => ({
 
             choose_lang: 'Choose Language',
             lang_self: 'EN',
-            hire_me: 'Hire Me'
+            hire_me: 'Hire Me',
+            check_projects: 'View projects',
+            check_resume: 'View resume'
         },
         ru: {
             welcome: 'Добро пожаловать',
@@ -28,7 +30,9 @@ export default defineI18nConfig(() => ({
 
             choose_lang: 'Выбрать Язык',
             lang_self: 'RU',
-            hire_me: 'Нанять'
+            hire_me: 'Нанять',
+            check_projects: 'Смотреть проекты',
+            check_resume: 'Смотреть резюме'
         },
         uz: {
             welcome: 'Hush kelibsiz',
@@ -42,7 +46,9 @@ export default defineI18nConfig(() => ({
 
             choose_lang: 'Til Tanlash',
             lang_self: 'UZ',
-            hire_me: 'Ish taklif qilish'
+            hire_me: 'Ish taklif qilish',
+            check_projects: 'Loyihalar',
+            check_resume: ''
         }
     }
 }))
