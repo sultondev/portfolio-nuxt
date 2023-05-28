@@ -22,8 +22,10 @@ module.exports = {
                 primaryLight: '#317355',
                 textLight: 'hsla(0,0%,100%,0.95)',
                 grayLight: 'hsla(0,0%,100%,0.7)',
+                whiteGray: 'hsla(0,0%,100%,0.6)',
                 textDark: '#292929',
-                pDark: '#4e4e4e'
+                pDark: '#4e4e4e',
+                hrClr: 'hsla(0,0%,100%,0.1)',
             }
         },
         screens: {

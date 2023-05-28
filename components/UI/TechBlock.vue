@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
     <h6 class="dark:text-white text-textDark font-bold text-xl">
       {{props.name}}
     </h6>
-    <p class="text-pDark text-base">
+    <p class="text-pDark dark:text-whiteGray text-base">
       {{
         props.description
       }}

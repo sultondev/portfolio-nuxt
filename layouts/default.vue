@@ -1,6 +1,8 @@
 <script setup lang="ts">
 
 
+import DSeparator from "~/components/UI/DSeparator.vue";
+
 const {locale} = useI18n()
 const menuOpen = ref(false)
 function toggle() {
@@ -9,10 +11,13 @@ function toggle() {
 function changeLang(selectedLang: string) {
   locale.value = selectedLang
 }
+function changeTheme(theme: string) {
+  useColorMode().preference = theme
+}
 </script>
 
 <template>
-  <div class="lg:flex text-textLight dark:bg-firstGray">
+  <div class="lg:flex  dark:text-textLight dark:bg-firstGray text-pDark">
     <section class="bg-secondGray relative py-6 px-5 sm:min-w-[300px] lg:min-h-screen overflow-hidden transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
@@ -36,23 +41,25 @@ function changeLang(selectedLang: string) {
                 We should never surrender
               </span>
             </p>
-            <div class="flex lg:w-full lg:justify-between lg:gap-0 md:max-w-[300px] md:justify-between max-w-fit mx-auto  gap-4 mb-8">
-              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-2 rounded-full flex items-center justify-center">
+            <div class="flex lg:w-full lg:justify-between lg:gap-0 md:max-w-[300px] md:justify-between max-w-fit mx-auto px-3">
+              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="text-white" size="22px" name="ri:linkedin-box-fill"></Icon>
               </a>
-              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-2 rounded-full flex items-center justify-center">
+              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="text-white" size="22px" name="uiw:github"></Icon>
               </a>
-              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-2 rounded-full flex items-center justify-center">
+              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="text-white" size="22px" name="uil:telegram"></Icon>
               </a>
-              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-2 rounded-full flex items-center justify-center">
+              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="text-white" size="22px" name="uil:instagram"></Icon>
               </a>
             </div>
           </div>
-          <hr class="mb-8">
-          <div class="w-fit mx-auto mb-8">
+<!--          <hr class="mb-8">-->
+          <DSeparator />
+
+          <div class="w-fit mx-auto">
             <nav class="flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6">
 
               <nuxt-link to="/" class="text-grayLight hover:text-white flex items-center ">
@@ -105,7 +112,9 @@ function changeLang(selectedLang: string) {
             </span>
             </button>
           </div>
-          <hr class="mb-3">
+<!--          <hr class="mb-3">-->
+          <DSeparator />
+
           <div class="">
             <h5 class="text-xl text-white font-bold mb-3 text-center">{{$t('choose_lang')}}</h5>
             <div class="flex w-fit border-2 mb-3 border-white text-white rounded font-bold mx-auto">
@@ -129,6 +138,12 @@ function changeLang(selectedLang: string) {
               </button>
             </div>
           </div>
+          <button @click="changeTheme('dark')">
+            Dark
+          </button>
+          <button @click="changeTheme('light')">
+            Light
+          </button>
         </div>
     </section>
     <div class="w-full h-full  min-h-screen">

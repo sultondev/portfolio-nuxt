@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <h6 class="relative section__title text-3xl dark:text-grayLight text-textDark font-semibold">
+  <h6 class="relative section__title text-3xl dark:text-white text-textDark font-semibold">
     <span :class="props.lineGap">
     {{props.title}}
     </span>
