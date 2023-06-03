@@ -25,7 +25,7 @@ const props =  withDefaults(defineProps<Props>(), {
 
   <button :class="[btnDefaultClass,props.classes]">
     <slot />
-    <span class="">{{props.message}}</span>
+    <span class="whitespace-nowrap">{{props.message}}</span>
   </button>
 
 </template>

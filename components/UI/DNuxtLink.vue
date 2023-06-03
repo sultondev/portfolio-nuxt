@@ -27,6 +27,6 @@ const props =  withDefaults(defineProps<Props>(), {
 <template>
   <NuxtLink :to="props.path" :class="[btnDefaultClass,props.classes]">
     <slot />
-    <span class="">{{props.message}}</span>
+    <span class="whitespace-nowrap">{{props.message}}</span>
   </NuxtLink>
 </template>
