@@ -19,7 +19,7 @@ function changeLang(selectedLang: string) {
 <template>
   <div class="lg:flex  dark:text-textLight dark:bg-firstGray text-pDark">
     <div class="relative  sm:min-w-[280px]">
-      <section class="menu-sidebar bg-secondGray lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-x-hidden lg:overflow-y-scroll transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
+      <section class="menu-sidebar bg-secondGray lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
           <span></span>

@@ -8,7 +8,7 @@
     }
 
     .menu-open {
-        @apply max-h-[901px];
+        @apply max-h-[1043px];
     }
 }
 
