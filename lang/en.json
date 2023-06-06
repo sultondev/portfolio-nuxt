@@ -12,25 +12,8 @@
     "lang_self": "EN",
     "hire_me": "Hire Me",
     "check_projects": "View projects",
-    "check_resume": "View resume"
+    "check_resume": "View resume",
+    "mode": "mode",
+    "dark": "Dark",
+    "light": "Light"
 }
-
-
-
-        uz: {
-            about_me: 'Men Haqimda',
-            my_projects: 'Loyihalar',
-            my_service_pricing: 'Xizmat va Narxlar',
-            my_resume: 'Rezyume (CV)',
-            my_blog: 'Blog',
-            my_contacts: "Bog'lanish",
-            more: "Ko'proq",
-
-            choose_lang: 'Til Tanlash',
-            lang_self: 'UZ',
-            hire_me: 'Ish taklif qilish',
-            check_projects: 'Loyihalar',
-            check_resume: ''
-        }
-    }
-}))

@@ -2,6 +2,8 @@
 
 
 import DSeparator from "~/components/UI/DSeparator.vue";
+import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
+import {useColorMode} from "../.nuxt/imports";
 
 const {locale} = useI18n()
 const menuOpen = ref(false)
@@ -11,14 +13,13 @@ function toggle() {
 function changeLang(selectedLang: string) {
   locale.value = selectedLang
 }
-function changeTheme(theme: string) {
-  useColorMode().preference = theme
-}
+
 </script>
 
 <template>
   <div class="lg:flex  dark:text-textLight dark:bg-firstGray text-pDark">
-    <section class="bg-secondGray relative py-6 px-5 sm:min-w-[300px] lg:min-h-screen overflow-hidden transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
+    <div class="relative  sm:min-w-[280px]">
+      <section class="menu-sidebar bg-secondGray lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-x-hidden lg:overflow-y-scroll transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
           <span></span>
@@ -117,9 +118,9 @@ function changeTheme(theme: string) {
 
           <div class="">
             <h5 class="text-xl text-white font-bold mb-3 text-center">{{$t('choose_lang')}}</h5>
-            <div class="flex w-fit border-2 mb-3 border-white text-white rounded font-bold mx-auto">
+            <div class="flex w-fit border mb-3 border-white text-white rounded font-bold mx-auto">
               <button @click="changeLang('en')" class="py-2 px-6 text-center border-r
-          hover:bg-primaryLight transition-all duration-200"
+          hover:bg-primaryLight transition-all duration-200 rounded-l"
                       :class="locale === 'en' ? 'bg-primaryLight' : ''"
               >
                 EN
@@ -131,21 +132,21 @@ function changeTheme(theme: string) {
                 RU
               </button>
               <button @click="changeLang('uz')" class="py-2 px-6 text-center
-          hover:bg-primaryLight transition-all duration-200"
+          hover:bg-primaryLight transition-all duration-200 rounded-r"
                       :class="locale === 'uz' ? 'bg-primaryLight' : ''"
               >
                 UZ
               </button>
             </div>
           </div>
-          <button @click="changeTheme('dark')">
-            Dark
-          </button>
-          <button @click="changeTheme('light')">
-            Light
-          </button>
+
+          <DSeparator />
+
+          <h5 class="text-xl text-white font-bold mb-3 text-center">{{$t(useColorMode().value)}} {{$t('mode')}}</h5>
+          <ThemeSwitcher />
         </div>
     </section>
+    </div>
     <div class="w-full h-full  min-h-screen">
       <slot />
     </div>
@@ -160,6 +161,18 @@ function changeTheme(theme: string) {
 
 .router-link-active:hover {
   color: #00dc82;
+}
+
+.menu-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.menu-sidebar::-webkit-scrollbar-thumb {
+  background: #35404e;
 }
 
 

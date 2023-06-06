@@ -12,7 +12,10 @@
     "lang_self": "RU",
     "hire_me": "Нанять",
     "check_projects": "Смотреть проекты",
-    "check_resume": "Смотреть резюме"
+    "check_resume": "Смотреть резюме",
+    "mode": "режим",
+    "dark": "Тёмный",
+    "light": "Белый"
 }
 
 

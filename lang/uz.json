@@ -12,7 +12,10 @@
     "lang_self": "UZ",
     "hire_me": "Ish taklif qilish",
     "check_projects": "Loyihalar",
-    "check_resume": "Rezyume"
+    "check_resume": "Rezyume",
+    "mode": "rejim",
+    "dark": "Tungi",
+    "light": "Kunduzgi"
 }
 
 

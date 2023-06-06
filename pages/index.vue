@@ -97,7 +97,7 @@ const { counter, doubleCounter } = storeToRefs(main)
 }
 
 .section-container {
-  @apply mx-auto py-12 2xl:max-w-[1200px] xl:max-w-[1000px] lg:max-w-[780px];
+  @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px];
 }
 
 .tech-icons-wrapper {

@@ -10,6 +10,8 @@ export default defineNuxtConfig({
         'nuxt-icon'
     ],
     colorMode: {
+        preference: "dark",
+        fallback: 'dark',
         classSuffix: ""
     },
     tailwindcss: {

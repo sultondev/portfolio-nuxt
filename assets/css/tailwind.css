@@ -11,3 +11,7 @@
         @apply max-h-[901px];
     }
 }
+
+:root {
+    --clr-primary: #54b689;
+}
