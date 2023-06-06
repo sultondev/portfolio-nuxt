@@ -8,8 +8,8 @@ function switchTheme() {
 
 <template>
   <client-only>
-    <div class="w-[74px] mx-auto rounded-full border-[3px] border-primary flex cursor-pointer" @click="switchTheme()">
-      <button class="theme-switcher__btn bg-primary m-1 rounded-full "
+    <div class="w-[74px] mx-auto rounded-full border-[3px] dark:border-primary flex cursor-pointer" @click="switchTheme()">
+      <button class="theme-switcher__btn dark:bg-primary bg-white m-1 rounded-full "
               ref="themeBtn"
         :class="[useColorMode().value === 'light' ? 'light-button translate-x-[100%]' : 'dark-button translate-x-0']"
       >

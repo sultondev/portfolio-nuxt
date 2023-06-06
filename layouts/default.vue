@@ -7,6 +7,7 @@ import {useColorMode} from "../.nuxt/imports";
 
 const {locale} = useI18n()
 const menuOpen = ref(false)
+const themeColors: any = ref(null)
 function toggle() {
   menuOpen.value = !menuOpen.value
 }
@@ -14,12 +15,20 @@ function changeLang(selectedLang: string) {
   locale.value = selectedLang
 }
 
+if(process.client) {
+  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
+}
+
+watch(() => useColorMode().value, (current) =>{
+  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
+})
+
 </script>
 
 <template>
-  <div class="lg:flex  dark:text-textLight dark:bg-firstGray text-pDark">
+  <div class="lg:flex dark:text-textLight dark:bg-firstGray text-pDark">
     <div class="relative  sm:min-w-[280px]">
-      <section class="menu-sidebar bg-secondGray lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
+      <section class="menu-sidebar dark:bg-secondGray bg-primary lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
           <span></span>
@@ -42,18 +51,18 @@ function changeLang(selectedLang: string) {
                 We should never surrender
               </span>
             </p>
-            <div class="flex lg:w-full lg:justify-between lg:gap-0 md:max-w-[300px] md:justify-between max-w-fit mx-auto px-3">
-              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-white" size="22px" name="ri:linkedin-box-fill"></Icon>
+            <div class="flex lg:w-full justify-between lg:gap-0 md:max-w-[300px] md:justify-between max-w-[240px] mx-auto px-3">
+              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="dark:text-white text-primary" size="22px" name="ri:linkedin-box-fill"></Icon>
               </a>
-              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-white" size="22px" name="uiw:github"></Icon>
+              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="dark:text-white text-primary" size="22px" name="uiw:github"></Icon>
               </a>
-              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-white" size="22px" name="uil:telegram"></Icon>
+              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="dark:text-white text-primary" size="22px" name="uil:telegram"></Icon>
               </a>
-              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primaryLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-white" size="22px" name="uil:instagram"></Icon>
+              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="dark:text-white text-primary" size="22px" name="uil:instagram"></Icon>
               </a>
             </div>
           </div>
@@ -61,52 +70,55 @@ function changeLang(selectedLang: string) {
           <DSeparator />
 
           <div class="w-fit mx-auto">
-            <nav class="flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6">
+            <client-only>
+              <nav class="nav flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6" :style="themeColors">
 
-              <nuxt-link to="/" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="fluent:person-20-filled" />
-                <span class="text-lg font-semibold">
-              {{ $t('about_me')}}
-            </span>
-              </nuxt-link>
-              <nuxt-link to="/projects" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="solar:programming-bold" />
-                <span class="text-lg font-semibold">
-              {{ $t('my_projects')}}
-            </span>
-              </nuxt-link>
-              <nuxt-link to="/service" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="gridicons:briefcase" />
-                <span class="text-lg font-semibold">
-              {{ $t('my_service_pricing')}}
-            </span>
-              </nuxt-link>
-              <nuxt-link to="/resume" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="pepicons-pop:cv" />
-                <span class="text-lg font-semibold">
-              {{ $t('my_resume')}}
-            </span>
-              </nuxt-link>
-              <nuxt-link to="/blog" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="fa6-solid:blog" />
-                <span class="text-lg font-semibold">
-              {{ $t('my_blog')}}
-            </span>
-              </nuxt-link>
-              <nuxt-link to="/contacts" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="mdi:email-newsletter" />
-                <span class="text-lg font-semibold">
-              {{ $t('my_contacts')}}
-            </span>
-              </nuxt-link>
-              <nuxt-link to="/" class="text-grayLight hover:text-white flex items-center ">
-                <Icon class="text-[20px] mr-2" name="mdi:cogs" />
-                <span class="text-lg font-semibold">
-              {{ $t('more')}}
-            </span>
-              </nuxt-link>
-            </nav>
-            <button class="text-white hover:bg-primaryHover flex items-center justify-center bg-primary text-center w-full py-2 rounded-md">
+                <nuxt-link to="/" class="nav-links__item">
+                  <Icon class="text-[20px] mr-2" name="fluent:person-20-filled" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('about_me')}}
+                  </span>
+                </nuxt-link>
+                <nuxt-link to="/projects" class="nav-links__item">
+                  <Icon class="text-[20px] mr-2" name="solar:programming-bold" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('my_projects')}}
+                  </span>
+                </nuxt-link>
+                <nuxt-link to="/service" class="nav-links__item">
+                  <Icon class="text-[20px] mr-2" name="gridicons:briefcase" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('my_service_pricing')}}
+                  </span>
+                </nuxt-link>
+                <nuxt-link to="/resume" class="nav-links__item">
+                  <Icon class="text-[20px] mr-2" name="pepicons-pop:cv" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('my_resume')}}
+                  </span>
+                </nuxt-link>
+                <nuxt-link to="/blog" class="nav-links__item">
+                  <Icon class="text-[20px] ml-0.5 mr-2" name="fa6-solid:blog" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('my_blog')}}
+                  </span>
+                </nuxt-link>
+                <nuxt-link to="/contacts" class="nav-links__item">
+                  <Icon class="text-[20px] mr-2" name="mdi:email-newsletter" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('my_contacts')}}
+                  </span>
+                </nuxt-link>
+                <button class="nav-links__item">
+                  <Icon class="text-[20px] mr-2" name="mdi:cogs" />
+                  <span class="text-lg font-semibold">
+                    {{ $t('more')}}
+                  </span>
+                </button>
+
+              </nav>
+            </client-only>
+            <button class="text-white dark:hover:bg-primaryHover hover:bg-[#224f3a] dark:bg-primary bg-[#317355] flex items-center justify-center  text-center w-full py-2 rounded-md">
               <Icon name="cib:telegram-plane" class="mr-2" />
               <span class="font-bold">
               {{$t('hire_me')}}
@@ -153,15 +165,19 @@ function changeLang(selectedLang: string) {
   </div>
 </template>
 
-<style >
+<style>
+.nav {
+  --active-link-clr: #00dc82;
+}
+.nav-links__item {
+  @apply text-grayLight dark:hover:text-white hover:text-[rgba(0,0,0,0.6)] flex items-center;
+}
+
 .router-link-active {
-  color: #00dc82;
+  color: var(--active-link-clr);
   transition: all 250ms;
 }
 
-.router-link-active:hover {
-  color: #00dc82;
-}
 
 .menu-sidebar::-webkit-scrollbar {
   width: 6px;

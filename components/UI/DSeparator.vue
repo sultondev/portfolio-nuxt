@@ -6,7 +6,7 @@ type Props = {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  lineClr: 'border-hrClr',
+  lineClr: 'dark:border-hrClr border-white',
   sepGap: 'my-8'
 })
 </script>
