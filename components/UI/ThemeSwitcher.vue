@@ -25,10 +25,10 @@ function switchTheme() {
   height: 24px
 
 .light-button
-  animation: light-animation 400ms linear
+  animation: light-animation 280ms linear
 
 .dark-button
-  animation: dark-animation 400ms linear
+  animation: dark-animation 280ms linear
 
 
 
