@@ -41,26 +41,24 @@ const { counter, doubleCounter } = storeToRefs(main)
              alt="" />
       </div>
     </div>
+
     <DSeparator class="mx-4" />
 
 	  <div class="section-container">
 		  <div class="">
         <div class="px-4">
-          <SectionTitle title="What do I do" line-gap="ml-5" class="text-4xl mb-4" />
+          <SectionTitle :title="$t('skills_i_have')" line-gap="ml-5" class="text-4xl mb-4" />
           <p class="dark:text-textLight text-pDark text-lg mb-8">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores, autem consectetur corporis doloribus ea explicabo
             illum
           </p>
         </div>
-        <div class="grid grid-cols-3 mb-8">
-          <TechBlock v-for="tech in TechsIUse" :description="tech.description" :name="tech.name" class="group mx-4 mb-8">
-            <template #icons class="">
-              <div class="tech-icons-wrapper">
-                <Icon v-for="techIcon in tech.icons" :name="techIcon.name" class="p-0" :style="{color: techIcon.color}"  />
-              </div>
-            </template>
-          </TechBlock>
-
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mb-8">
+          <TechBlock v-for="tech in TechsIUse"
+                     :description="tech.description"
+                     :tech-icons="tech.icons"
+                     :name="tech.name"
+          />
         </div>
         <div class="w-full">
           <DNuxtLink path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" classes="">
@@ -97,12 +95,10 @@ const { counter, doubleCounter } = storeToRefs(main)
 }
 
 .section-container {
-  @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px];
+  @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px] overflow-x-hidden;
 }
 
-.tech-icons-wrapper {
-  @apply group-hover:-translate-x-4 text-4xl  transition-all duration-300 -translate-x-1;
-}
+
 
 </style>
 
