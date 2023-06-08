@@ -73,37 +73,37 @@ watch(() => useColorMode().value, (current) =>{
             <client-only>
               <nav class="nav flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6" :style="themeColors">
 
-                <nuxt-link to="/" class="nav-links__item">
+                <nuxt-link :to="localePath('/')" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="fluent:person-20-filled" />
                   <span class="text-lg font-semibold">
                     {{ $t('about_me')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link to="/projects" class="nav-links__item">
+                <nuxt-link :to="localePath('/projects')" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="solar:programming-bold" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_projects')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link to="/service" class="nav-links__item">
+                <nuxt-link :to="localePath('/service')" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="gridicons:briefcase" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_service_pricing')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link to="/resume" class="nav-links__item">
+                <nuxt-link :to="localePath('/resume')" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="pepicons-pop:cv" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_resume')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link to="/blog" class="nav-links__item">
+                <nuxt-link :to="localePath('/blog')" class="nav-links__item">
                   <Icon class="text-[20px] ml-0.5 mr-2" name="fa6-solid:blog" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_blog')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link to="/contacts" class="nav-links__item">
+                <nuxt-link :to="localePath('/contacts')" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="mdi:email-newsletter" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_contacts')}}
