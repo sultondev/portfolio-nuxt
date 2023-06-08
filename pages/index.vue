@@ -8,6 +8,7 @@ import SectionTitle from "~/components/UI/SectionTitle.vue";
 import TechBlock from "~/components/UI/TechBlock.vue";
 import DSeparator from "~/components/UI/DSeparator.vue";
 import {TechsIUse} from '~/constants/index'
+import FtProjectCard from "~/components/Cards/FtProjectCard.vue";
 
 const { locale } = useI18n()
 const main = useMainStore()
@@ -17,7 +18,7 @@ const { counter, doubleCounter } = storeToRefs(main)
 
 </script>
 <template>
-  <div class="sm:text-2xl sm:text-green-500 xs:text-7xl xs:text-red-600 ">
+  <div class="">
     <div class="section-container">
       <div class="flex justify-between lg:flex-row flex-col px-4">
         <div class="lg:w-2/4 w-full">
@@ -72,9 +73,11 @@ const { counter, doubleCounter } = storeToRefs(main)
 
     <section class="section-container">
       <div class="px-4">
-        <SectionTitle title="Featured Projects" line-gap="ml-5" class="text-4xl mb-4" />
-
-
+        <SectionTitle title="Featured Projects" line-gap="ml-5" class="text-4xl mb-12" />
+        <div class="grid xl:grid-cols-2 place-items-center w-full">
+          <FtProjectCard class="md:px-6 md:py-12 sm:p-4 py-6" />
+          <FtProjectCard class="md:px-6 md:py-12 sm:p-4 py-6" />
+        </div>
       </div>
     </section>
     <DSeparator class="mx-4" />

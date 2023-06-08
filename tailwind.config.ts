@@ -20,6 +20,7 @@ module.exports = {
                 secondGray: '#1e2a3a',
                 grayLighter: '#384f6c',
                 grayLightHover:'#415c7c',
+                grayDark: '#151e29',
                 primaryLight: '#317355',
                 textLight: 'hsla(0,0%,100%,0.95)',
                 grayLight: 'hsla(0,0%,100%,0.7)',
@@ -31,6 +32,8 @@ module.exports = {
         },
         screens: {
             'xs': '320px',
+
+            '2xs': '420px',
 
             'sm': '640px',
             // => @media (min-width: 640px) { ... }
