@@ -25,9 +25,13 @@ module.exports = {
                 textLight: 'hsla(0,0%,100%,0.95)',
                 grayLight: 'hsla(0,0%,100%,0.7)',
                 whiteGray: 'hsla(0,0%,100%,0.6)',
+                whiteLight: '#fafafa',
                 textDark: '#292929',
                 pDark: '#4e4e4e',
                 hrClr: 'hsla(0,0%,100%,0.1)',
+            },
+            boxShadow: {
+                'ftCard': '0 0 20px rgba(1,1,1,.2)!important',
             }
         },
         screens: {

@@ -28,7 +28,8 @@ watch(() => useColorMode().value, (current) =>{
 <template>
   <div class="lg:flex dark:text-textLight dark:bg-firstGray text-pDark">
     <div class="relative  sm:min-w-[280px]">
-      <section class="menu-sidebar dark:bg-secondGray bg-primary lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }">
+      <client-only>
+       <section class="menu-sidebar dark:bg-secondGray bg-primary lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }" :style="{'--thumb-clr': useColorMode().value === 'dark' ? '#35404e': '#43926e'}">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
           <span></span>
@@ -70,8 +71,7 @@ watch(() => useColorMode().value, (current) =>{
           <DSeparator />
 
           <div class="w-fit mx-auto">
-            <client-only>
-              <nav class="nav flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6" :style="themeColors">
+            <nav class="nav flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6" :style="themeColors">
 
                 <nuxt-link :to="localePath('/')" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="fluent:person-20-filled" />
@@ -117,7 +117,6 @@ watch(() => useColorMode().value, (current) =>{
                 </button>
 
               </nav>
-            </client-only>
             <button class="text-white dark:hover:bg-primaryHover hover:bg-[#224f3a] dark:bg-primary bg-[#317355] flex items-center justify-center  text-center w-full py-2 rounded-md">
               <Icon name="cib:telegram-plane" class="mr-2" />
               <span class="font-bold">
@@ -158,6 +157,8 @@ watch(() => useColorMode().value, (current) =>{
           <ThemeSwitcher />
         </div>
     </section>
+      </client-only>
+
     </div>
     <div class="w-full h-full  min-h-screen">
       <slot />
@@ -168,6 +169,10 @@ watch(() => useColorMode().value, (current) =>{
 <style>
 .nav {
   --active-link-clr: #00dc82;
+}
+
+.menu-sidebar {
+  --thumb-clr: '#43926e';
 }
 .nav-links__item {
   @apply text-grayLight dark:hover:text-white hover:text-[rgba(0,0,0,0.6)] flex items-center;
@@ -188,7 +193,7 @@ watch(() => useColorMode().value, (current) =>{
 }
 
 .menu-sidebar::-webkit-scrollbar-thumb {
-  background: #35404e;
+  background: var(--thumb-clr);
 }
 
 
