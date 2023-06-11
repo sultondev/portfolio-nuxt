@@ -1,0 +1,2 @@
+export const btnDefaultClasses= 'transition-all duration-800 linear max-w-fit text-white hover:bg-primaryHover flex items-center justify-center bg-primary text-center w-full rounded-md'
+export const linkDefaulClasses= 'transition-all duration-400 linear text-primary'

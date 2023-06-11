@@ -2,12 +2,11 @@
 
 
 
-const btnDefaultClass= 'transition-all duration-800 linear max-w-fit text-white hover:bg-primaryHover flex items-center justify-center bg-primary text-center w-full rounded-md'
 
 type Props = {
   message: string
   iconName?: string
-  classes?: string
+  classes?: string | string[]
   iconClass?: '',
   path: string
 }
@@ -25,8 +24,9 @@ const props =  withDefaults(defineProps<Props>(), {
 
 
 <template>
-  <NuxtLink :to="props.path" :class="[btnDefaultClass,props.classes]">
+  <NuxtLink :to="localePath(props.path)" :class="[props.classes]">
     <slot />
     <span class="whitespace-nowrap">{{props.message}}</span>
+    <slot name="after-icon" />
   </NuxtLink>
 </template>

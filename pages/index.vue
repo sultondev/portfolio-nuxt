@@ -9,6 +9,9 @@ import TechBlock from "~/components/UI/TechBlock.vue";
 import DSeparator from "~/components/UI/DSeparator.vue";
 import {TechsIUse} from '~/constants/index'
 import FtProjectCard from "~/components/Cards/FtProjectCard.vue";
+import BlogItemCard from "~/components/Cards/BlogItemCard.vue";
+
+import {btnDefaultClasses} from "~/constants/UI/DNuxtLink"
 
 const { locale } = useI18n()
 const main = useMainStore()
@@ -62,7 +65,7 @@ const { counter, doubleCounter } = storeToRefs(main)
           />
         </div>
         <div class="w-full">
-          <DNuxtLink path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" classes="">
+          <DNuxtLink path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" :classes="btnDefaultClasses">
             <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
           </DNuxtLink>
         </div>
@@ -78,6 +81,11 @@ const { counter, doubleCounter } = storeToRefs(main)
           <FtProjectCard class="md:px-6 md:py-12 sm:p-4 py-6" />
           <FtProjectCard class="md:px-6 md:py-12 sm:p-4 py-6" />
         </div>
+        <div class="w-fit mx-auto">
+          <DNuxtLink path="/projects" :message="$t('check_projects')" :classes="btnDefaultClasses" class="text-base 2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2">
+            <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
+          </DNuxtLink>
+        </div>
       </div>
     </section>
     <DSeparator class="mx-4" />
@@ -85,6 +93,9 @@ const { counter, doubleCounter } = storeToRefs(main)
       <div class="px-4">
         <SectionTitle title="Latest Posts" line-gap="ml-5" class="text-4xl mb-4" />
 
+        <div class="grid xl:grid-cols-3 lg:grid-cols-2 place-items-center">
+          <BlogItemCard link_to_post="" class="my-8"/>
+        </div>
 
       </div>
     </section>

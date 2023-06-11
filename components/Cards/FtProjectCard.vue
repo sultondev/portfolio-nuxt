@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <div class="">
-    <div class="dark:bg-grayDark bg-whiteLight shadow-ftCard flex md:flex-row flex-col lg:max-w-full md:max-w-[70%] 2xs:max-w-[300px]  mx-auto">
+    <div class="dark:bg-grayDark bg-whiteLight shadow-cardItem flex md:flex-row flex-col lg:max-w-full md:max-w-[70%] 2xs:max-w-[300px]  mx-auto">
       <img :src="thumbnail" class="md:w-[165px] md:h-[185px] 2xs:w-[342px] 2xs:h-[230px] w-full object-cover" alt="">
       <div class="flex flex-col justify-between p-5 md:min-h-[185px] min-h-[210px]">
         <div class="max-w-fit">
@@ -47,6 +47,5 @@ const props = withDefaults(defineProps<Props>(), {
   -webkit-line-clamp: 3;
   line-clamp: 2;
   -webkit-box-orient: vertical;
-
 }
 </style>

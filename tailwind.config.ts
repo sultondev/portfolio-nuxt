@@ -21,6 +21,7 @@ module.exports = {
                 grayLighter: '#384f6c',
                 grayLightHover:'#415c7c',
                 grayDark: '#151e29',
+                grayDarker: '#6c757d',
                 primaryLight: '#317355',
                 textLight: 'hsla(0,0%,100%,0.95)',
                 grayLight: 'hsla(0,0%,100%,0.7)',
@@ -31,7 +32,8 @@ module.exports = {
                 hrClr: 'hsla(0,0%,100%,0.1)',
             },
             boxShadow: {
-                'ftCard': '0 0 20px rgba(1,1,1,.2)!important',
+                'cardItem': '0 0 20px rgba(1,1,1,.2)!important',
+                'blogCard': '0 0 13px rgba(1,1,1,.2)!important',
             }
         },
         screens: {
