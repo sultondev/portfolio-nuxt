@@ -27,10 +27,10 @@ const props = withDefaults(defineProps<Props>(), {
       <nuxt-link class="mb-4 block text-xl text-primary">
         {{title}}
       </nuxt-link>
-      <div class="xl:mb-8 lg:mb-6 mb-4 blog-brief__text text-sm text-grayLight">
+      <div class="xl:mb-8 lg:mb-6 mb-4 blog-brief__text text-sm dark:text-grayLight">
         {{brief_text}}
       </div>
-      <div class="xl:mb-8 lg:mb-6 mb-4 text-sm font-bold text-grayLight">
+      <div class="xl:mb-8 lg:mb-6 mb-4 text-sm font-bold dark:text-grayLight">
         Language: English
       </div>
       <DNuxtLink path="/projects" :message="$t('read_more')" class="" :classes="[linkDefaulClasses, 'hover:underline']">
