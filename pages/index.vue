@@ -32,10 +32,10 @@ const { counter, doubleCounter } = storeToRefs(main)
             illum iste iusto mollitia optio quaerat qui rerum, saepe tenetur unde voluptates voluptatibus voluptatum.
           </p>
           <div class="flex h-fit lg:mb-0 mb-20">
-            <DButton :message="$t('check_projects')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2">
+            <DNuxtLink path="/projects" :message="$t('check_projects')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
               <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
-            </DButton>
-            <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" classes="!bg-grayLighter hover:!bg-grayLightHover">
+            </DNuxtLink>
+            <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2 text-white" classes="transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
               <Icon name="mdi:file-document-multiple" class="mr-2 text-2xl" />
             </DNuxtLink>
           </div>
@@ -95,6 +95,12 @@ const { counter, doubleCounter } = storeToRefs(main)
 
         <div class="grid xl:grid-cols-3 lg:grid-cols-2 place-items-center">
           <BlogItemCard link_to_post="" class="my-8"/>
+        </div>
+
+        <div class="w-fit mx-auto">
+          <DNuxtLink path="/blog" :message="$t('blog')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
+            <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
+          </DNuxtLink>
         </div>
 
       </div>

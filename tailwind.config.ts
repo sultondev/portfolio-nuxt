@@ -29,6 +29,7 @@ module.exports = {
                 whiteLight: '#fafafa',
                 textDark: '#292929',
                 pDark: '#4e4e4e',
+                pDarkHover: '#292929',
                 hrClr: 'hsla(0,0%,100%,0.1)',
             },
             boxShadow: {
