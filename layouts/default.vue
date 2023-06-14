@@ -4,19 +4,21 @@
 import DSeparator from "~/components/UI/DSeparator.vue";
 import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "../.nuxt/imports";
+import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 
-const {locale} = useI18n()
+const {locale, availableLocales, strategy} = useI18n()
 const menuOpen = ref(false)
 const themeColors: any = ref(null)
+
 function toggle() {
   menuOpen.value = !menuOpen.value
 }
-function changeLang(selectedLang: string) {
-  locale.value = selectedLang
-}
+
+
 
 if(process.client) {
   themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
+  console.log(availableLocales)
 }
 
 watch(() => useColorMode().value, (current) =>{
@@ -42,7 +44,7 @@ watch(() => useColorMode().value, (current) =>{
       </h6>
         <div class="py-2 transition-all duration-500 lg:opacity-100 opacity-0" :class="{'opacity-100': menuOpen }">
           <div class="">
-            <div class="w-[160px] h-[160px] mb-3 dark:bg-firstGray bg-white text-white mx-auto rounded-full mb-3 flex justify-center items-center">
+            <div class="w-[160px] h-[160px] mb-3 dark:bg-firstGray bg-white text-white mx-auto rounded-full flex justify-center items-center">
               <!--            <img src="../assets/images/my-picture.jpeg" class="w-[160px] rounded-full" alt="">-->
               <h6 class="text-7xl dark:text-white text-[#317355]">S</h6>
             </div>
@@ -52,7 +54,7 @@ watch(() => useColorMode().value, (current) =>{
                 We should never surrender
               </span>
             </p>
-            <div class="flex lg:w-full justify-between lg:gap-0 md:max-w-[300px] md:justify-between max-w-[240px] mx-auto px-3">
+            <div class="flex lg:w-full justify-between md:max-w-[300px] md:justify-between max-w-[240px] mx-auto px-3">
               <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="dark:text-white text-primary" size="22px" name="ri:linkedin-box-fill"></Icon>
               </a>
@@ -130,24 +132,31 @@ watch(() => useColorMode().value, (current) =>{
           <div class="">
             <h5 class="text-xl text-white font-bold mb-3 text-center">{{$t('choose_lang')}}</h5>
             <div class="flex w-fit border mb-3 border-white text-white rounded font-bold mx-auto">
-              <button @click="changeLang('en')" class="py-2 px-6 text-center border-r
-          hover:bg-primaryLight transition-all duration-200 rounded-l"
-                      :class="locale === 'en' ? 'bg-primaryLight' : ''"
-              >
-                EN
-              </button>
-              <button @click="changeLang('ru')" class="py-2 px-6 text-center border-r
-          hover:bg-primaryLight transition-all duration-200"
-                      :class="locale === 'ru' ? 'bg-primaryLight' : ''"
-              >
-                RU
-              </button>
-              <button @click="changeLang('uz')" class="py-2 px-6 text-center
-          hover:bg-primaryLight transition-all duration-200 rounded-r"
-                      :class="locale === 'uz' ? 'bg-primaryLight' : ''"
-              >
-                UZ
-              </button>
+<!--              <DNuxtLink path="/en" message="EN" class="py-2 px-6 text-center border-r-->
+<!--          hover:bg-primaryLight transition-all duration-200 rounded-l"-->
+<!--                      :class="locale === 'en' ? 'bg-primaryLight' : ''"-->
+<!--               />-->
+<!--              <button @click="changeLang('ru')" class="py-2 px-6 text-center border-r-->
+<!--          hover:bg-primaryLight transition-all duration-200"-->
+<!--                      :class="locale === 'ru' ? 'bg-primaryLight' : ''"-->
+<!--              >-->
+<!--                RU-->
+<!--              </button>-->
+<!--              <button @click="changeLang('uz')" class="py-2 px-6 text-center-->
+<!--          hover:bg-primaryLight transition-all duration-200 rounded-r"-->
+<!--                      :class="locale === 'uz' ? 'bg-primaryLight' : ''"-->
+<!--              >-->
+<!--                UZ-->
+<!--              </button>-->
+              <nuxt-link
+                  v-for="avLocale in availableLocales"
+                  :key="avLocale"
+                  class="py-2 px-6 text-center first:border-r last:border-l
+          hover:bg-primaryLight transition-all duration-200 first:rounded-l last:rounded-r uppercase"
+                  :class="locale === avLocale ? 'bg-primaryLight' : ''"
+                  :to="switchLocalePath(avLocale)">
+                {{ avLocale }}
+              </nuxt-link>
             </div>
           </div>
 
