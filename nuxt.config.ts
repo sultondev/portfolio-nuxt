@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import TranslateModule from './modules/index'
+// import TranslateModule from './modules/index'
 export default defineNuxtConfig({
     modules: [
-        TranslateModule,
+        // TranslateModule,
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
         '@pinia/nuxt',
-        '@nuxtjs/i18n',
+        // '@nuxtjs/i18n',
         'nuxt-icon'
     ],
     colorMode: {
@@ -21,23 +21,23 @@ export default defineNuxtConfig({
         injectPosition: 0,
         viewer: true,
     },
-    i18n: {
-        lazy: false,
-        langDir: 'lang',
-        locales: [
-            {
-                code: 'en',
-                file: 'en.json'
-            },
-            {
-                code: 'ru',
-                file: 'ru.json'
-            },
-            {
-                code: 'uz',
-                file: 'uz.json'
-            }
-        ],
-        defaultLocale: 'en'
-    },
+    // i18n: {
+    //     lazy: false,
+    //     langDir: 'lang',
+    //     locales: [
+    //         {
+    //             code: 'en',
+    //             file: 'en.json'
+    //         },
+    //         {
+    //             code: 'ru',
+    //             file: 'ru.json'
+    //         },
+    //         {
+    //             code: 'uz',
+    //             file: 'uz.json'
+    //         }
+    //     ],
+    //     defaultLocale: 'en'
+    // },
 })

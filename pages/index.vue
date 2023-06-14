@@ -12,12 +12,13 @@ import FtProjectCard from "~/components/Cards/FtProjectCard.vue";
 import BlogItemCard from "~/components/Cards/BlogItemCard.vue";
 
 import {btnDefaultClasses} from "~/constants/UI/DNuxtLink"
+import {useI18n} from "vue-i18n";
 
-const { locale } = useI18n()
 const main = useMainStore()
 // extract specific store properties
 const { counter, doubleCounter } = storeToRefs(main)
-
+const {locale} = useI18n()
+locale.value = 'ru'
 
 </script>
 <template>

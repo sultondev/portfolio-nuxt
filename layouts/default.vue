@@ -5,20 +5,21 @@ import DSeparator from "~/components/UI/DSeparator.vue";
 import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "../.nuxt/imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
+import {useI18n} from "vue-i18n";
 
-const {locale, availableLocales, strategy} = useI18n()
+// const {locale, availableLocales, strategy} = useI18n()
 const menuOpen = ref(false)
 const themeColors: any = ref(null)
-
 function toggle() {
   menuOpen.value = !menuOpen.value
 }
-
+const {locale, availableLocales} = useI18n()
 
 
 if(process.client) {
   themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
   console.log(availableLocales)
+  locale.value='ru'
 }
 
 watch(() => useColorMode().value, (current) =>{
@@ -30,7 +31,7 @@ watch(() => useColorMode().value, (current) =>{
 <template>
   <div class="lg:flex dark:text-textLight dark:bg-firstGray text-pDark">
     <div class="relative  sm:min-w-[280px]">
-      <client-only>
+<!--      <client-only>-->
        <section class="menu-sidebar dark:bg-secondGray bg-primary lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }" :style="{'--thumb-clr': useColorMode().value === 'dark' ? '#35404e': '#43926e'}">
       <button class="lg:hidden absolute" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
@@ -75,37 +76,37 @@ watch(() => useColorMode().value, (current) =>{
           <div class="w-fit mx-auto">
             <nav class="nav flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6" :style="themeColors">
 
-                <nuxt-link :to="localePath('/')" class="nav-links__item">
+                <nuxt-link :to="'/'" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="fluent:person-20-filled" />
                   <span class="text-lg font-semibold">
                     {{ $t('about_me')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link :to="localePath('/projects')" class="nav-links__item">
+                <nuxt-link :to="'/projects'" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="solar:programming-bold" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_projects')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link :to="localePath('/service')" class="nav-links__item">
+                <nuxt-link :to="'/service'" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="gridicons:briefcase" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_service_pricing')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link :to="localePath('/resume')" class="nav-links__item">
+                <nuxt-link :to="'/resume'" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="pepicons-pop:cv" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_resume')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link :to="localePath('/blog')" class="nav-links__item">
+                <nuxt-link :to="'/blog'" class="nav-links__item">
                   <Icon class="text-[20px] ml-0.5 mr-2" name="fa6-solid:blog" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_blog')}}
                   </span>
                 </nuxt-link>
-                <nuxt-link :to="localePath('/contacts')" class="nav-links__item">
+                <nuxt-link :to="'/contacts'" class="nav-links__item">
                   <Icon class="text-[20px] mr-2" name="mdi:email-newsletter" />
                   <span class="text-lg font-semibold">
                     {{ $t('my_contacts')}}
@@ -148,15 +149,15 @@ watch(() => useColorMode().value, (current) =>{
 <!--              >-->
 <!--                UZ-->
 <!--              </button>-->
-              <nuxt-link
-                  v-for="avLocale in availableLocales"
-                  :key="avLocale"
-                  class="py-2 px-6 text-center first:border-r last:border-l
-          hover:bg-primaryLight transition-all duration-200 first:rounded-l last:rounded-r uppercase"
-                  :class="locale === avLocale ? 'bg-primaryLight' : ''"
-                  :to="switchLocalePath(avLocale)">
-                {{ avLocale }}
-              </nuxt-link>
+<!--              <nuxt-link-->
+<!--                  v-for="avLocale in availableLocales"-->
+<!--                  :key="avLocale"-->
+<!--                  class="py-2 px-6 text-center first:border-r last:border-l-->
+<!--          hover:bg-primaryLight transition-all duration-200 first:rounded-l last:rounded-r uppercase"-->
+<!--                  :class="locale === avLocale ? 'bg-primaryLight' : ''"-->
+<!--                  :to="switchLocalePath(avLocale)">-->
+<!--                {{ avLocale }}-->
+<!--              </nuxt-link>-->
             </div>
           </div>
 
@@ -166,7 +167,7 @@ watch(() => useColorMode().value, (current) =>{
           <ThemeSwitcher />
         </div>
     </section>
-      </client-only>
+<!--      </client-only>-->
 
     </div>
     <div class="w-full h-full  min-h-screen">
