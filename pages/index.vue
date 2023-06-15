@@ -57,13 +57,15 @@ const { counter, doubleCounter } = storeToRefs(main)
             {{$t('skills_summary')}}
           </p>
         </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mb-8">
-          <TechBlock v-for="tech in TechsIUse"
-                     :description="tech[locale]"
-                     :tech-icons="tech.icons"
-                     :name="tech.name"
-          />
-        </div>
+        <client-only>
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mb-8">
+            <TechBlock v-for="tech in TechsIUse"
+                       :description="tech[locale]"
+                       :tech-icons="tech.icons"
+                       :name="tech.name"
+            />
+          </div>
+        </client-only>
         <div class="w-full">
           <DNuxtLink path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" :classes="btnDefaultClasses">
             <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
