@@ -12,5 +12,5 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <hr class="" :class="[props.lineClr, props.sepGap]" />
+  <hr class="mx-auto 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px]" :class="[props.lineClr, props.sepGap]" />
 </template>

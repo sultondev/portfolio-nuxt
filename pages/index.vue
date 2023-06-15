@@ -22,9 +22,9 @@ const { counter, doubleCounter } = storeToRefs(main)
 </script>
 <template>
   <div class="">
-    <div class="bg-[#fafafa] dark:bg-transparent">
+    <div class="bg-[#fafafa] dark:bg-transparent dark:border dark:border-[hsla(0,0%,100%,.05)]">
       <div class="section-container">
-        <div class="flex justify-between lg:flex-row flex-col px-4">
+        <div class="flex justify-between lg:flex-row flex-col">
           <div class="lg:w-[60%] lg:pr-2 w-full">
             <h6 class="text-5xl dark:text-textLight font-bold mb-2 text-textDark">Sultonkhan Ablakulav</h6>
             <p class="dark:text-grayLight text-pDark text-2xl mb-4">Front-End developer</p>
@@ -47,25 +47,22 @@ const { counter, doubleCounter } = storeToRefs(main)
       </div>
     </div>
 
-    <DSeparator class="mx-4" />
 
 	  <div class="section-container">
 		  <div class="">
-        <div class="px-4">
+        <div class="">
           <SectionTitle :title="$t('skills_i_have')" line-gap="ml-5" class="text-4xl mb-4" />
           <p class="text-pDark dark:text-whiteGray text-base mb-8">
             {{$t('skills_summary')}}
           </p>
         </div>
-        <client-only>
-          <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mb-8">
-            <TechBlock v-for="tech in TechsIUse"
-                       :description="tech[locale]"
-                       :tech-icons="tech.icons"
-                       :name="tech.name"
-            />
-          </div>
-        </client-only>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mb-8">
+          <TechBlock v-for="tech in TechsIUse"
+                     :description="tech[locale]"
+                     :tech-icons="tech.icons"
+                     :name="tech.name"
+          />
+        </div>
         <div class="w-full">
           <DNuxtLink path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" :classes="btnDefaultClasses">
             <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
@@ -77,7 +74,7 @@ const { counter, doubleCounter } = storeToRefs(main)
     <DSeparator class="mx-4" />
 
     <section class="section-container">
-      <div class="px-4">
+      <div class="">
         <SectionTitle title="Featured Projects" line-gap="ml-5" class="text-4xl mb-12" />
         <div class="grid xl:grid-cols-2 place-items-center w-full">
           <FtProjectCard class="md:px-6 md:py-12 sm:p-4 py-6" />
@@ -90,9 +87,11 @@ const { counter, doubleCounter } = storeToRefs(main)
         </div>
       </div>
     </section>
+
     <DSeparator class="mx-4" />
+
     <section class="section-container">
-      <div class="px-4">
+      <div class="">
         <SectionTitle title="Latest Posts" line-gap="ml-5" class="text-4xl mb-4" />
 
         <div class="grid xl:grid-cols-3 lg:grid-cols-2 place-items-center">

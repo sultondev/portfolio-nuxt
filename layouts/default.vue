@@ -5,6 +5,7 @@ import DSeparator from "~/components/UI/DSeparator.vue";
 import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "../.nuxt/imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
+import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 
 const {locale, availableLocales, strategy} = useI18n()
 const menuOpen = ref(false)
@@ -118,12 +119,16 @@ watch(() => useColorMode().value, (current) =>{
                 </button>
 
               </nav>
-            <button class="text-white dark:hover:bg-primaryHover hover:bg-[#224f3a] dark:bg-primary bg-[#317355] flex items-center justify-center  text-center w-full py-2 rounded-md">
+<!--            <button class="  flex items-center justify-center  text-center w-full py-2 rounded-md">-->
+<!--              <Icon name="cib:telegram-plane" class="mr-2" />-->
+<!--              <span class="font-bold">-->
+<!--                {{$t('hire_me')}}-->
+<!--              </span>-->
+<!--            </button>-->
+
+            <DNuxtLink path="/projects" :message="$t('hire_me')" class="hire__link hover:!bg-[#224f3a] !bg-[#317355] block !min-w-full" :classes="[linkDefaulClasses]">
               <Icon name="cib:telegram-plane" class="mr-2" />
-              <span class="font-bold">
-              {{$t('hire_me')}}
-            </span>
-            </button>
+            </DNuxtLink>
           </div>
 <!--          <hr class="mb-3">-->
           <DSeparator />
@@ -184,6 +189,10 @@ watch(() => useColorMode().value, (current) =>{
 }
 .nav-links__item {
   @apply text-grayLight dark:hover:text-white hover:text-[rgba(0,0,0,0.6)] flex items-center;
+}
+
+.hire__link {
+  @apply dark:hover:!bg-primaryHover dark:!bg-primary !text-white text-base text-center rounded font-bold py-2;
 }
 
 .router-link-active {
