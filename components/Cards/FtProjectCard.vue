@@ -1,10 +1,10 @@
 <script setup lang="ts">
 type Props = {
-  thumbnail: string
-  name: string
-  description: string
-  client_info: string
-  link_to_project: string
+  thumbnail?: string
+  name?: string
+  description?: string
+  client_info?: string
+  link_to_project?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {

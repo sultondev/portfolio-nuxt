@@ -3,11 +3,11 @@ import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 
 type Props = {
-  thumbnail: string
-  title: string
-  brief_text: string
-  link_to_post: string
-  created_at: string
+  thumbnail?: string
+  title?: string
+  brief_text?: string
+  link_to_post?: string
+  created_at?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {

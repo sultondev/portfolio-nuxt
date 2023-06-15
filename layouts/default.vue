@@ -18,7 +18,6 @@ function toggle() {
 
 if(process.client) {
   themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
-  console.log(availableLocales)
 }
 
 watch(() => useColorMode().value, (current) =>{

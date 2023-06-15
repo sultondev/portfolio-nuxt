@@ -1,8 +1,8 @@
 <script setup lang="ts">
 type Props = {
-  title: string
-	lineClr: string
-  lineGap: string
+  title?: string
+	lineClr?: string
+  lineGap?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
