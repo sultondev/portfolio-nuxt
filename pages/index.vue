@@ -22,27 +22,28 @@ const { counter, doubleCounter } = storeToRefs(main)
 </script>
 <template>
   <div class="">
-    <div class="section-container">
-      <div class="flex justify-between lg:flex-row flex-col px-4">
-        <div class="lg:w-2/4 w-full">
-          <h6 class="text-5xl dark:text-textLight font-bold mb-2 text-textDark">Sultonkhan Ablakulav</h6>
-          <p class="dark:text-grayLight text-pDark text-2xl mb-4">Front-End developer</p>
-          <p class="dark:text-grayLight text-pDark text-base mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores, autem consectetur corporis doloribus ea explicabo
-            illum iste iusto mollitia optio quaerat qui rerum, saepe tenetur unde voluptates voluptatibus voluptatum.
-          </p>
-          <div class="flex h-fit lg:mb-0 mb-20">
-            <DNuxtLink path="/projects" :message="$t('check_projects')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
-              <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
-            </DNuxtLink>
-            <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2 text-white" classes="transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
-              <Icon name="mdi:file-document-multiple" class="mr-2 text-2xl" />
-            </DNuxtLink>
+    <div class="bg-[#fafafa] dark:bg-transparent">
+      <div class="section-container">
+        <div class="flex justify-between lg:flex-row flex-col px-4">
+          <div class="lg:w-[60%] lg:pr-2 w-full">
+            <h6 class="text-5xl dark:text-textLight font-bold mb-2 text-textDark">Sultonkhan Ablakulav</h6>
+            <p class="dark:text-grayLight text-pDark text-2xl mb-4">Front-End developer</p>
+            <p class="dark:text-grayLight text-pDark text-base mb-4">
+              {{$t('summary')}}
+            </p>
+            <div class="flex h-fit lg:mb-0 mb-20">
+              <DNuxtLink path="/projects" :message="$t('check_projects')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
+                <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
+              </DNuxtLink>
+              <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2 text-white" classes="transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
+                <Icon name="mdi:file-document-multiple" class="mr-2 text-2xl" />
+              </DNuxtLink>
+            </div>
           </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
+               class="xl:w-[400px] xl:h-[300px] lg:w-[340px] lg:h-[260px] w-full min-h-[300px]"
+               alt="" />
         </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
-             class="xl:w-[400px] xl:h-[300px] lg:w-[340px] lg:h-[260px] w-full min-h-[300px]"
-             alt="" />
       </div>
     </div>
 
@@ -52,14 +53,13 @@ const { counter, doubleCounter } = storeToRefs(main)
 		  <div class="">
         <div class="px-4">
           <SectionTitle :title="$t('skills_i_have')" line-gap="ml-5" class="text-4xl mb-4" />
-          <p class="dark:text-textLight text-pDark text-lg mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores, autem consectetur corporis doloribus ea explicabo
-            illum
+          <p class="text-pDark dark:text-whiteGray text-base mb-8">
+            {{$t('skills_summary')}}
           </p>
         </div>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mb-8">
           <TechBlock v-for="tech in TechsIUse"
-                     :description="tech.description"
+                     :description="tech[locale]"
                      :tech-icons="tech.icons"
                      :name="tech.name"
           />
@@ -115,7 +115,7 @@ const { counter, doubleCounter } = storeToRefs(main)
 }
 
 .section-container {
-  @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px] overflow-x-hidden;
+  @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px];
 }
 
 

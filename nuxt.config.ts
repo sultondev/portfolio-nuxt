@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import TranslateModule from './modules/index'
+import TranslateModule from './modules/i18n'
 export default defineNuxtConfig({
     modules: [
         TranslateModule,

@@ -18,13 +18,13 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <div class="group mx-4 mb-8">
-    <div class="tech-icons-wrapper gap-3">
-      <Icon v-for="techIcon in techIcons" :name="techIcon.name" class="p-0 " :style="{color: useColorMode().value == 'dark' ? (techIcon.darkThemeColor ?? techIcon.color) : techIcon.color}"  />
+    <div class="tech-icons-wrapper mb-1">
+      <Icon v-for="techIcon in techIcons" :name="techIcon.name" class="pr-1" :style="{color: useColorMode().value == 'dark' ? (techIcon.darkThemeColor ?? techIcon.color) : techIcon.color}"  />
     </div>
-    <h6 class="dark:text-white text-textDark font-bold text-xl">
+    <h6 class="dark:text-white text-black font-bold text-base mb-1.5">
       {{props.name}}
     </h6>
-    <p class="text-pDark dark:text-whiteGray text-base">
+    <p class="text-black dark:text-whiteGray text-sm">
       {{
         props.description
       }}
@@ -35,10 +35,10 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style>
 .tech-icons-wrapper {
-  @apply text-4xl  transition-all duration-300  group-hover:scale-110;
+  @apply text-4xl  transition-all duration-300  group-hover:scale-110 -translate-x-1;
 }
 
 .tech-icons-wrapper-lg {
-  @apply group-hover:-translate-x-1 text-4xl  transition-all duration-300  group-hover:scale-110;
+  @apply group-hover:-translate-x-0.5 text-4xl  transition-all duration-500 ease-linear  group-hover:scale-110;
 }
 </style>-
