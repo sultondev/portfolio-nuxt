@@ -22,7 +22,7 @@ const { counter, doubleCounter } = storeToRefs(main)
 </script>
 <template>
   <div class="">
-    <div class="bg-[#fafafa] dark:bg-transparent dark:border dark:border-[hsla(0,0%,100%,.05)]">
+    <div class="section-bottom__border">
       <div class="section-container">
         <div class="flex justify-between lg:flex-row flex-col">
           <div class="lg:w-[60%] lg:pr-2 w-full">
@@ -115,6 +115,10 @@ const { counter, doubleCounter } = storeToRefs(main)
   @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px];
 }
 
+
+.section-bottom__border {
+  @apply bg-[#fafafa] dark:bg-transparent dark:border dark:border-[hsla(0,0%,100%,.05)];
+}
 
 
 </style>

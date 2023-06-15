@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
       <img :src="thumbnail" class="md:w-[165px] md:h-[185px] 2xs:w-[342px] 2xs:h-[230px] w-full object-cover" alt="">
       <div class="flex flex-col justify-between p-5 md:min-h-[185px] min-h-[210px]">
         <div class="max-w-fit">
-          <nuxt-link :to="link_to_project" class="text-xl text-primary block mb-4">
+          <nuxt-link :to="link_to_project" class="text-xl text-primary block mb-4 hover:underline transition-all duration-300">
             {{name}}
           </nuxt-link>
           <div class="ft-project__description text-sm text-pDark dark:text-whiteGray ">
@@ -44,7 +44,7 @@ const props = withDefaults(defineProps<Props>(), {
 .ft-project__description {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }

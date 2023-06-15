@@ -49,5 +49,5 @@ const TechsIUse = [
         uz: "To'liq tugallangan veb-saytlarni tuzish uchun ma'lumotlar bazalari. Barcha ma'lumotlar ushbu texnologiyalarda saqlanadi."
     }
 ]
-
-export {TechsIUse}
+import projects from "~/constants/projects";
+export {TechsIUse, projects}
