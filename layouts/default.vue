@@ -119,12 +119,6 @@ watch(() => useColorMode().value, (current) =>{
                 </button>
 
               </nav>
-<!--            <button class="  flex items-center justify-center  text-center w-full py-2 rounded-md">-->
-<!--              <Icon name="cib:telegram-plane" class="mr-2" />-->
-<!--              <span class="font-bold">-->
-<!--                {{$t('hire_me')}}-->
-<!--              </span>-->
-<!--            </button>-->
 
             <DNuxtLink path="/projects" :message="$t('hire_me')" class="hire__link hover:!bg-[#224f3a] !bg-[#317355] block !min-w-full" :classes="[linkDefaulClasses]">
               <Icon name="cib:telegram-plane" class="mr-2" />
