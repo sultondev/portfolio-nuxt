@@ -130,32 +130,16 @@ watch(() => useColorMode().value, (current) =>{
               <Icon name="cib:telegram-plane" class="mr-2" />
             </DNuxtLink>
           </div>
-<!--          <hr class="mb-3">-->
+
           <DSeparator />
 
           <div class="">
             <h5 class="text-xl text-white font-bold mb-3 text-center">{{$t('choose_lang')}}</h5>
             <div class="flex w-fit border mb-3 border-white text-white rounded font-bold mx-auto">
-<!--              <DNuxtLink path="/en" message="EN" class="py-2 px-6 text-center border-r-->
-<!--          hover:bg-primaryLight transition-all duration-200 rounded-l"-->
-<!--                      :class="locale === 'en' ? 'bg-primaryLight' : ''"-->
-<!--               />-->
-<!--              <button @click="changeLang('ru')" class="py-2 px-6 text-center border-r-->
-<!--          hover:bg-primaryLight transition-all duration-200"-->
-<!--                      :class="locale === 'ru' ? 'bg-primaryLight' : ''"-->
-<!--              >-->
-<!--                RU-->
-<!--              </button>-->
-<!--              <button @click="changeLang('uz')" class="py-2 px-6 text-center-->
-<!--          hover:bg-primaryLight transition-all duration-200 rounded-r"-->
-<!--                      :class="locale === 'uz' ? 'bg-primaryLight' : ''"-->
-<!--              >-->
-<!--                UZ-->
-<!--              </button>-->
               <nuxt-link
                   v-for="avLocale in availableLocales"
                   :key="avLocale"
-                  class="py-2 px-6 text-center first:border-r last:border-l
+                  class="py-1.5 px-5 text-center first:border-r last:border-l
           hover:bg-primaryLight transition-all duration-200 first:rounded-l last:rounded-r uppercase"
                   :class="locale === avLocale ? 'bg-primaryLight' : ''"
                   :to="switchLocalePath(avLocale)">
@@ -166,7 +150,17 @@ watch(() => useColorMode().value, (current) =>{
 
           <DSeparator />
 
-          <h5 class="text-xl text-white font-bold mb-3 text-center">{{$t(useColorMode().value)}} {{$t('mode')}}</h5>
+          <div class="text-xl text-white font-bold mb-3 text-center flex items-center justify-center">
+            <div class="min-w-[20px] min-h-[20px] block mr-2 relative">
+              <TransitionGroup name="icons">
+                <Icon name="material-symbols:light-mode" class="left-0 absolute" v-if="useColorMode().value === 'light' " />
+                <Icon name="ic:round-dark-mode" class="left-0 absolute" v-else />
+              </TransitionGroup>
+            </div>
+            <span class="">
+              {{$t(useColorMode().value)}} {{$t('mode')}}
+            </span>
+          </div>
           <ThemeSwitcher />
         </div>
     </section>
@@ -180,6 +174,16 @@ watch(() => useColorMode().value, (current) =>{
 </template>
 
 <style>
+.icons-enter-active,
+.icons-leave-active {
+  transition: all 0.5s ease;
+}
+.icons-enter-from,
+.icons-leave-to {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
 .nav {
   --active-link-clr: #00dc82;
 }
