@@ -25,7 +25,18 @@
     "client": "Buyurmachi",
     "projects_substring": "Onlayn portfolioga xush kelibsiz. Ayni paytda men mustaqil ish bilan shug'ullanmoqdaman. Dasturiy ta'minotni tuzishda yordam xohlaysizmi?",
     "service_substring_experience": "Menda veb uchun dasturiy ta'minotlar tuzish bo'yicha 1 yillik tajriba mavjud. Mening qobiliyatlarim va tajribam haqimda ko'proq bilish uchun mening portfolio loyihalarim va onlayn rezyumemni ko'rib chiqishingiz mumkin.",
-    "service_substring_cooperation": "Hozirda men frilansda dasturiy ta'minotlar ustida ishlamoqdaman. Loyihangiz uchun maxsus narx taklifini olish uchun men bilan bog'lanishingiz mumkin. Shuningdek, men belgilangan narxlarga ega bo'lgan rivojlanish xizmatlari paketlarini taklif qilaman."
+    "service_substring_cooperation": "Hozirda men frilansda dasturiy ta'minotlar ustida ishlamoqdaman. Loyihangiz uchun maxsus narx taklifini olish uchun men bilan bog'lanishingiz mumkin. Shuningdek, men belgilangan narxlarga ega bo'lgan rivojlanish xizmatlari paketlarini taklif qilaman.",
+
+    "service_plan_basic": "Boshlang'ich",
+    "service_plan_standard": "Standart",
+    "service_plan_premium": "Premium",
+    "service_plan_gold": "Oltin",
+
+    "service_package_price": "Narxlar",
+    "service_details": "Tafsilotlar",
+    "service_details_basic": "Asosan Front-End ga yo'naltirilgan veb-saytlarni ishlab chiqarish. Dizayn mijoz tomonidan taqdim etilishi kerak.",
+    "service_details_standard": "O'rta hajmdagi veb-ilova. Statik Backend, Frontend, Maxsus dizayn ishlab chiquvchi tomonidan ta'minlanadi.",
+    "service_details_premium": "Biznes uchun murakkab veb-dastur. Hamma narsa dinamik, shu jumladan Backend, Frontend. Ish muvaffaqiyatli bo'lishiga mo'ljallangan.",
+
+    "service_book": "Buyurtma"
 }
-
-

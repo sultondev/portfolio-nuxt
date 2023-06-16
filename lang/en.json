@@ -25,5 +25,18 @@
     "client": "Client",
     "projects_substring": "Welcome to my online portfolio. I'm taking on freelance work at the moment. Want some help building your software?",
     "service_substring_experience": "I have a year of personal experience building softwares for the web. You can take a look at my project portfolio and online resume to find out more about my skills and experiences.",
-    "service_substring_cooperation": "I'm currently taking on freelance software development work. You're welcome to contact me for a custom quote for your project. I also offer development service packages with fixed pricing."
+    "service_substring_cooperation": "I'm currently taking on freelance software development work. You're welcome to contact me for a custom quote for your project. I also offer development service packages with fixed pricing.",
+
+    "service_plan_basic": "Basic",
+    "service_plan_standard": "Standard",
+    "service_plan_premium": "Premium",
+    "service_plan_gold": "Gold",
+
+    "service_package_price": "Package Price",
+    "service_details": "Details",
+    "service_details_basic": "Production of Websites that are mainly focused on Front-End Development. The design must be provided by the client.",
+    "service_details_standard": "The medium-sized web-app. Static Backend, Frontend, Custom design are provided by the developer.",
+    "service_details_premium":  "A complex web application for businesses. Everything is dynamic including Backend, Frontend. Aimed to succeed in the job.",
+
+    "service_book": "Book Now"
 }

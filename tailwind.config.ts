@@ -26,6 +26,8 @@ module.exports = {
                 textLight: 'hsla(0,0%,100%,0.95)',
                 grayLight: 'hsla(0,0%,100%,0.7)',
                 whiteGray: 'hsla(0,0%,100%,0.6)',
+                tbBrClrDark: "hsla(0,0%,100%,0.1)",
+                tbBrClrWhite: 'rgba(0,0,0,0.1)',
                 whiteLight: '#fafafa',
                 textDark: '#292929',
                 pDark: '#4e4e4e',

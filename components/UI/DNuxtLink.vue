@@ -8,7 +8,7 @@ type Props = {
   iconName?: string
   classes?: string | string[]
   iconClass?: '',
-  path: string
+  path: string | object,
 }
 
 const props =  withDefaults(defineProps<Props>(), {
