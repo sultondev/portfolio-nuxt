@@ -6,6 +6,7 @@ import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "../.nuxt/imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
+import {useI18n} from "../.nuxt/imports";
 
 const {locale, availableLocales, strategy} = useI18n()
 const menuOpen = ref(false)
