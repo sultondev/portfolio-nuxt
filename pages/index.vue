@@ -111,14 +111,6 @@ const { counter, doubleCounter } = storeToRefs(main)
 
 <style>
 
-.section-container {
-  @apply mx-auto py-12 2xl:max-w-[1110px] xl:max-w-[1000px] lg:max-w-[780px];
-}
-
-
-.section-bottom__border {
-  @apply bg-[#fafafa] dark:bg-transparent dark:border dark:border-[hsla(0,0%,100%,.05)];
-}
 
 
 </style>

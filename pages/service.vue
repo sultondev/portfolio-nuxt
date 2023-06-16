@@ -18,9 +18,20 @@ const {locale} = useI18n()
               {{ $t('my_service_pricing')}}
             </h6>
 
-            <p class="dark:text-grayLight text-pDark text-base text-center md:max-w-[74%] mx-auto mb-4">
-              {{$t('service_substring_experience')}}
-            </p>
+<!--            <p class="dark:text-grayLight text-pDark text-base text-center md:max-w-[74%] mx-auto mb-4">-->
+<!--              {{$t('service_substring_experience')}}-->
+<!--            </p>-->
+
+            <i18n-t keypath="service_substring_experience" tag="p" class="dark:text-grayLight text-pDark text-base text-center md:max-w-[74%] mx-auto mb-4">
+              <template v-slot:projects>
+                <DNuxtLink path="/projects" :message="$t('my_portfolio_projects')" class="hover:text-primaryGray hover:underline text-primary">
+                </DNuxtLink>
+              </template>
+              <template v-slot:resume>
+                <DNuxtLink path="/resume" :message="$t('my_service_resume')" class="hover:text-primaryGray hover:underline text-primary">
+                </DNuxtLink>
+              </template>
+            </i18n-t>
 
             <p class="dark:text-grayLight text-pDark text-base text-center md:max-w-[74%] mx-auto">
               {{$t('service_substring_cooperation')}}
