@@ -18,11 +18,11 @@ function toggle() {
 
 
 if(process.client) {
-  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
+  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
 }
 
 watch(() => useColorMode().value, (current) =>{
-  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#00dc82'}
+  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
 })
 
 </script>
@@ -179,7 +179,7 @@ watch(() => useColorMode().value, (current) =>{
 }
 
 .nav {
-  --active-link-clr: #00dc82;
+  --active-link-clr: #54b689;
 }
 
 .menu-sidebar {

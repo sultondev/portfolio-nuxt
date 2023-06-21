@@ -31,11 +31,11 @@ const { counter, doubleCounter } = storeToRefs(main)
             <p class="dark:text-grayLight text-pDark text-base mb-4">
               {{$t('summary')}}
             </p>
-            <div class="flex h-fit lg:mb-0 mb-20">
-              <DNuxtLink path="/projects" :message="$t('check_projects')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
+            <div class="flex sm:flex-row flex-col h-fit lg:mb-0 mb-20">
+              <DNuxtLink path="/projects" :message="$t('check_projects')" class="sm:mb-0 mb-4 text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
                 <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
               </DNuxtLink>
-              <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2 text-white" classes="transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
+              <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-3 mr-3 rounded font-bold py-2 text-white" classes="flex justify-start max-w-fit transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
                 <Icon name="mdi:file-document-multiple" class="mr-2 text-2xl" />
               </DNuxtLink>
             </div>

@@ -24,7 +24,7 @@ const props =  withDefaults(defineProps<Props>(), {
 
 
 <template>
-  <NuxtLink :to="localePath(props.path)" :class="[props.classes]">
+  <NuxtLink :to="localePath(props.path)" :class="[props.classes, 'whitespace-nowrap']">
     <slot />
     <span class="whitespace-nowrap">{{props.message}}</span>
     <slot name="after-icon" />
