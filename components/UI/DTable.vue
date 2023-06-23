@@ -25,7 +25,7 @@ const props = defineProps<{ classes: string }>()
 }
 
 .table tbody tr th {
-  @apply py-4 px-8 border dark:border-tbBrClrDark border-tbBrClrWhite font-semibold xl:w-1/4 w-2/4 text-left dark:bg-grayDark bg-whiteLight;
+  @apply sm:py-4 sm:px-8 py-2 px-4 border dark:border-tbBrClrDark border-tbBrClrWhite font-semibold xl:w-1/4 w-2/4 text-left dark:bg-grayDark bg-whiteLight;
 }
 
 .table tbody tr td {

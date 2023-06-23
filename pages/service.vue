@@ -4,6 +4,7 @@ import {btnDefaultClasses, linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {useI18n} from "#imports";
 import DTable from "~/components/UI/DTable.vue";
+import {I18nT} from "~/.output/server/chunks/app/server.mjs";
 
 
 const {locale} = useI18n()
@@ -30,7 +31,12 @@ type ServiceType = {
 }
 
 type PackageNamesType = "basic" | "standard" | "premium" | "gold"
-
+type PackageTranslateNamesType = {
+  basic: string
+  standard: string
+  premium: string
+  gold: string
+}
 
 const selectedPackage = ref<PackageNamesType>('basic')
 const servicesData = ref<ServiceType[]>([
@@ -175,7 +181,7 @@ const servicesData = ref<ServiceType[]>([
     }
   },
 ])
-const packageNames = ref({basic: "service_plan_basic", standard: "service_plan_standard",premium: "service_plan_premium", gold: "service_plan_gold"})
+const packageNames = ref<PackageTranslateNamesType>({basic: "service_plan_basic", standard: "service_plan_standard",premium: "service_plan_premium", gold: "service_plan_gold"})
 const packagePrices = ref({basic: "$200", standard: "$2000",premium: "$3800+", gold: "$5200+"})
 const packegesDetails = ref({basic: "service_details_basic", standard: "service_details_standard",premium: "service_details_premium", gold: "service_details_gold"})
 const serviceNumData = ref([
@@ -207,7 +213,7 @@ function selectPackage(packageName: PackageNamesType) {
 
 <template>
   <div class="">
-    <div class="section-bottom__border bg-[#fafafa] dark:bg-transparent mb-6">
+    <div class="section-bottom__border bg-[#fafafa] dark:bg-transparent ">
       <div class="section-container">
         <div class="text-center px-4">
           <div class="w-fit mx-auto">
@@ -231,23 +237,18 @@ function selectPackage(packageName: PackageNamesType) {
       </div>
     </div>
 
-    <div class="xl:hidden flex flex-col max-w-[240px] mx-auto">
-      <button class="my-2 block w-full p-1 bg-primary rounded font-semibold capitalize" @click="selectPackage('basic')">
-        basic
-      </button>
-      <button class="my-2 block w-full p-1 bg-primary rounded font-semibold capitalize" @click="selectPackage('standard')">
-        standard
-      </button>
-      <button class="my-2 block w-full p-1 bg-primary rounded font-semibold capitalize" @click="selectPackage('premium')">
-        premium
-      </button>
-      <button class="my-2 block w-full p-1 bg-primary rounded font-semibold capitalize" @click="selectPackage('gold')">
-        gold
+    <h4 class="text-center mb-6 font-bold text-3xl mt-12">
+      {{$t('service_packages')}}
+    </h4>
+
+    <div class="xl:hidden flex flex-col max-w-[190px] mx-auto mb-8">
+      <button v-for="item in Object.keys(packageNames)" class="my-2 block w-full py-2 text-lg dark:bg-grayDark bg-tbBrClrWhite dark:text-white text-pDark rounded font-bold capitalize transition-all ease-linear duration-200 dark:hover:!bg-primaryDarker" :class="[item === selectedPackage?'!bg-primary !text-white' : '']" @click="selectPackage(<'basic' | 'standard' | 'premium' | 'gold'>item)">
+        {{$t(packageNames[item])}}
       </button>
     </div>
 
-    <div class="section-container py-12">
-      <DTable class="max-w-[920px] xl:min-w-[920px] w-full mx-auto dark:text-grayLight">
+    <div class="section-container !py-0 overflow-x-hidden !pb-12">
+      <DTable class="max-w-[920px] xl:min-w-[920px] mb-12 w-full mx-auto dark:text-grayLight">
         <template v-slot:thead>
           <tr class="">
             <th></th>
@@ -372,6 +373,18 @@ function selectPackage(packageName: PackageNamesType) {
 
         </template>
       </DTable>
+
+      <div class="">
+        <h4 class="text-center text-2xl font-bold mb-6">
+          {{$t('faq')}}
+        </h4>
+        <p class="text-center dark:text-whiteGray">
+          {{$t('faq_sub')}}
+        </p>
+
+      </div>
     </div>
+
+
   </div>
 </template>

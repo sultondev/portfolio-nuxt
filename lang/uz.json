@@ -38,5 +38,11 @@
     "service_details_standard": "O'rta hajmdagi veb-ilova. Statik Backend, Frontend, Maxsus dizayn ishlab chiquvchi tomonidan ta'minlanadi.",
     "service_details_premium": "Biznes uchun murakkab veb-dastur. Hamma narsa dinamik, shu jumladan Backend, Frontend. Ish muvaffaqiyatli bo'lishiga mo'ljallangan.",
 
-    "service_book": "Buyurtma"
+    "service_book": "Buyurtma",
+
+    "service_packages": "Xizmat paketlari",
+
+    "faq": "Ko'p So'raladigan Savollar",
+    "faq_sub": "Ko'p so'raladigan savollarga pastroqda javob olishingiz mumkin."
+
 }

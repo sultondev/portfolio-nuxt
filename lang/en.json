@@ -38,5 +38,11 @@
     "service_details_standard": "The medium-sized web-app. Static Backend, Frontend, Custom design are provided by the developer.",
     "service_details_premium":  "A complex web application for businesses. Everything is dynamic including Backend, Frontend. Aimed to succeed in the job.",
 
-    "service_book": "Book Now"
+    "service_book": "Book Now",
+
+    "service_packages": "Service Packages",
+
+    "faq": "FAQs",
+    "faq_sub": "You can get answers for most asked questions below."
+
 }
