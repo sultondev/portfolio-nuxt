@@ -8,12 +8,12 @@
     <h3 class="dark:text-whiteGray text-sm">
       {{$t('made_by')}}
     </h3>
-    <div class="flex justify-center items-center">
+    <div class="flex flex-wrap justify-center items-center">
       <Icon name="ri:copyright-fill" class="text-primary mx-1" />
       <p class="mx-1 dark:text-whiteGray text-sm">
         Copyright 2023.
       </p>
-      <div class="flex">
+      <div class="flex flex-wrap justify-center">
         <p class="mx-1 dark:text-whiteGray text-sm">
           {{$t('copy_rights')}}
         </p>
