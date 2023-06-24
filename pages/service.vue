@@ -383,7 +383,7 @@ function selectPackage(packageName: PackageNamesType) {
         </p>
 
         <div class="">
-          <FaqCard class="sm:w-3/4 w-full mx-auto" :is-card-open="false" question="faq_question_1" answer="faq_answer_1">
+          <FaqCard  class="sm:w-3/4 w-full mx-auto" :is-card-open="false" question="faq_question_1" answer="faq_answer_1">
           </FaqCard>
         </div>
       </div>

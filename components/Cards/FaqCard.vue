@@ -5,7 +5,12 @@ type Props = {
   answer: string
 }
 
+interface Emits {
+  (e: 'openCard', val: string | number): void
+}
+
 const props = defineProps<Props>()
+const emits = defineEmits<Emits>()
 const test = ref(false)
 </script>
 
