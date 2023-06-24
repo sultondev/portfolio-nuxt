@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
-import {btnDefaultClasses, linkDefaulClasses} from "~/constants/UI/DNuxtLink";
+import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {useI18n} from "#imports";
 import DTable from "~/components/UI/DTable.vue";
-import {I18nT} from "~/.output/server/chunks/app/server.mjs";
+import FaqCard from "~/components/Cards/FaqCard.vue";
 
 
 const {locale} = useI18n()
@@ -378,10 +378,14 @@ function selectPackage(packageName: PackageNamesType) {
         <h4 class="text-center text-2xl font-bold mb-6">
           {{$t('faq')}}
         </h4>
-        <p class="text-center dark:text-whiteGray">
+        <p class="text-center dark:text-whiteGray mb-12">
           {{$t('faq_sub')}}
         </p>
 
+        <div class="">
+          <FaqCard class="sm:w-3/4 w-full mx-auto" :is-card-open="false" question="faq_question_1" answer="faq_answer_1">
+          </FaqCard>
+        </div>
       </div>
     </div>
 
