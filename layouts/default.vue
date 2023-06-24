@@ -161,8 +161,9 @@ watch(() => useColorMode().value, (current) =>{
       </client-only>
 
     </div>
-    <div class="w-full h-full  min-h-screen">
+    <div class="w-full h-full  min-h-screen flex flex-col justify-between">
       <slot />
+      <Footer />
     </div>
   </div>
 </template>

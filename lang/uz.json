@@ -45,6 +45,10 @@
     "faq": "Ko'p So'raladigan Savollar",
     "faq_sub": "Ko'p so'raladigan savollarga pastroqda javob olishingiz mumkin.",
     "faq_question_1": "Muayyan paket uchun arzonroq narxlarni qila olasizmi?",
-    "faq_answer_1": "Ha, lekin bu aniq loyihalarga bog'liq."
+    "faq_answer_1": "Ha, lekin bu aniq loyihalarga bog'liq.",
+
+    "made_by": "Sultonxon Abalakulov tomonidan ishlab chiqilgan.",
+    "copy_rights":  "Barcha huquqlar himoyalangan.",
+    "policy": "Maxfiylik siyosati."
 
 }

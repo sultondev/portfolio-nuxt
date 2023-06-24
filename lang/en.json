@@ -45,6 +45,10 @@
     "faq": "FAQs",
     "faq_sub": "You can get answers for most asked questions below.",
     "faq_question_1": "Can you make lower prices for the certain package?",
-    "faq_answer_1": "Yes, but it depends on specific projects."
+    "faq_answer_1": "Yes, but it depends on specific projects.",
+
+    "made_by": "Made by Sultonkhan Ablakulav.",
+    "copy_rights":  "All rights reserved.",
+    "policy": "Privacy policy."
 
 }
