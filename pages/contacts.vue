@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import DInput from "~/components/UI/DInput.vue";
+import DTextarea from "~/components/UI/DTextarea.vue";
 </script>
 
 <template>
@@ -9,9 +10,10 @@ import DInput from "~/components/UI/DInput.vue";
       contacts
     </div>
 
-    <DInput label="Full name" value="" class="w-[400px] mx-auto" type="email">
+    <DInput label="Full name" value="" class="w-[400px] mx-auto mb-40" type="email">
 
     </DInput>
 
+    <DTextarea label="Message" value="" class="w-[400px] mx-auto" />
   </div>
 </template>
