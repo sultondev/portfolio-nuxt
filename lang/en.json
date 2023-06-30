@@ -19,7 +19,7 @@
     "skills_i_have": "What do I know?",
     "read_more": "Read more",
     "check_service": "Services & Prices",
-    "summary": "I'm a full-stack developer with 3 years of experience using Vue.js and Express.js to build awesome, reliable, responsive, automated, attractive Single Page Applications. Just forget about old reloading web sites. See further in my projects or check out my resume.",
+    "summary": "I'm a full-stack developer with 3 years of experience using Vue.js and Express.js to build awesome, reliable, responsive, automated, attractive Single Page Applications. Just forget about old reloading web sites. See further in my {projects} or check out my {resume}.",
     "skills_summary": "I have experience with the web for 3 years building commercial and personal projects. Here's the quick overview of what I use to build cool web apps.",
     "blog": "Blog",
     "client": "Client",
@@ -60,5 +60,8 @@
     "package_hard_select": "Don't you have an idea to select a package?",
     "message": "Message",
 
-    "send_message": "Send Message"
+    "send_message": "Send Message",
+
+    "summary_projects": "projects",
+    "summary_resume": "resume"
 }

@@ -11,7 +11,7 @@ import {TechsIUse} from '~/constants/index'
 import FtProjectCard from "~/components/Cards/FtProjectCard.vue";
 import BlogItemCard from "~/components/Cards/BlogItemCard.vue";
 
-import {btnDefaultClasses} from "~/constants/UI/DNuxtLink"
+import {btnDefaultClasses, linkDefaulClasses} from "~/constants/UI/DNuxtLink"
 
 const { locale } = useI18n()
 const main = useMainStore()
@@ -28,9 +28,19 @@ const { counter, doubleCounter } = storeToRefs(main)
           <div class="lg:w-[60%] lg:pr-2 w-full">
             <h6 class="text-5xl dark:text-textLight font-bold mb-2 text-textDark">Sultonkhan Ablakulav</h6>
             <p class="dark:text-grayLight text-pDark text-2xl mb-4">Front-End developer</p>
-            <p class="dark:text-grayLight text-pDark text-base mb-4">
-              {{$t('summary')}}
-            </p>
+
+            <i18n-t
+                tag="p"
+                keypath="summary"
+                class="dark:text-grayLight text-pDark text-base mb-4"
+            >
+              <template #resume>
+                <DNuxtLink :path="localePath('/resume')" :message="$t('summary_resume')" :classes="[linkDefaulClasses]" />
+              </template>
+              <template #projects>
+                <DNuxtLink :path="localePath('/projects')" :message="$t('summary_projects')" :classes="[linkDefaulClasses]" />
+              </template>
+            </i18n-t>
             <div class="flex sm:flex-row flex-col h-fit lg:mb-0 mb-20">
               <DNuxtLink path="/projects" :message="$t('check_projects')" class="sm:mb-0 mb-4 text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
                 <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />

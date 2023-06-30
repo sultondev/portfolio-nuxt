@@ -57,17 +57,17 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
             </p>
 
             <div class="flex lg:w-full justify-between md:max-w-[240px] md:justify-between max-w-[240px] mx-auto px-3">
-              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text- hover:text-grayLight text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-primary text-3xl"  name="ri:linkedin-box-fill"></Icon>
+              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text-primaryLightHover hover:text-primaryDarkHover text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="text-inherit text-3xl"  name="ri:linkedin-box-fill"></Icon>
               </a>
-              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text- hover:text-grayLight text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-primary text-3xl"  name="uiw:github"></Icon>
+              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text-primaryLightHover hover:text-primaryDarkHover text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="text-inherit text-3xl"  name="uiw:github"></Icon>
               </a>
-              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text- hover:text-grayLight text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-primary text-3xl"  name="uil:telegram"></Icon>
+              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text-primaryLightHover hover:text-primaryDarkHover text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="text-inherit text-3xl"  name="uil:telegram"></Icon>
               </a>
-              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text- hover:text-grayLight text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
-                <Icon class="text-primary text-3xl"  name="uil:instagram"></Icon>
+              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="bg-transparent  dark:hover:text-primaryLightHover hover:text-primaryDarkHover text-primary transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+                <Icon class="text-inherit text-3xl"  name="uil:instagram"></Icon>
               </a>
             </div>
           </div>
