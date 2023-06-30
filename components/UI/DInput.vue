@@ -1,13 +1,14 @@
 <script setup lang="ts">
 
 interface Props {
-  value: string;
+  defaultValue?: string;
   label: string;
-  type?: string
+  type?: string;
+  updateFieldName?: string;
 }
 
 interface Emits {
-  'update:value': (value: string) => void;
+  'updateValue': (value: string, fieldName?: string) => void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -16,12 +17,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emits = defineEmits<Emits>();
 
-const internalValue = ref(props.value);
-const internalType = ref(props.type)
+const internalValue = ref(props.defaultValue || '');
+const internalType = ref(props.type || 'text')
 const handleChange = (event: Event) => {
   const newValue = (event.target as HTMLInputElement).value;
   internalValue.value = newValue;
-  emits('update:value', newValue);
+  emits('update:value', newValue, props.updateFieldName);
 };
 
 const clearInput = () => {

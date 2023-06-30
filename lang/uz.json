@@ -49,6 +49,16 @@
 
     "made_by": "Sultonxon Abalakulov tomonidan ishlab chiqilgan.",
     "copy_rights":  "Barcha huquqlar himoyalangan.",
-    "policy": "Maxfiylik siyosati."
+    "policy": "Maxfiylik siyosati.",
 
+    "contact_explanations": "Meni loyihangizga yollamoqchimisiz yoki salom aytishni xohlaysizmi? Siz quyida joylashgan aloqa shaklini to'ldirishingiz yoki {email} elektron manziliga elektron pochta xabarini yuborishingiz mumkin.",
+    "contact_follow": "Ulanishni xohlaysizmi? Meni quyidagi ijtimoiy kanallarda kuzatib boring.",
+
+    "package_select": "Xizmat paketini tanlang",
+    "full_name": "To'liq ism",
+    "email": "El-po'chta (ma'nzil)",
+    "package_hard_select": " Paketni tanlash haqida ikkilanyapsizmi?",
+    "message": "Xabar",
+
+    "send_message": "Xabar Jo'natish"
 }

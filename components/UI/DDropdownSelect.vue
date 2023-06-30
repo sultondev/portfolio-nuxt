@@ -1,7 +1,9 @@
 <script setup lang="ts">
 
-import {useI18n} from "#imports";
-import { watch } from 'vue';
+
+import {watch} from 'vue';
+
+import {useI18n, ref} from "#imports";
 
 interface Option {
   value: string;
@@ -10,11 +12,12 @@ interface Option {
 
 interface Props {
   options: Option[];
-  defaultValue?: Option;
+  defaultValue?: Option | {};
   placeholder: string;
   selectFieldName?: string
   placeholderFieldName?: string
   closeAfterSelect?: boolean
+  updateFieldName?: string
 }
 
 interface Emits {
@@ -33,7 +36,7 @@ const emits = defineEmits<Emits>();
 const selectedOption = ref(props.defaultValue || {});
 
 const handleSelectChange = () => {
-  emits('update:value', selectedOption.value);
+  emits('update:value', selectedOption.value, props.updateFieldName);
 };
 
 type DropdownClickHandler = () => void;
@@ -64,10 +67,10 @@ watch(selectedOption, (current)=> {
 
     </div>
     <div class="select-field" @click="handleDropdownClick">
-      <h6 v-if="Object.values(selectedOption).length == 0" class="text-lg font-semibold dark:hover:text-textLight dark:text-whiteGray shrink w-full">
+      <h6 v-if="Object.values(selectedOption).length == 0" class="text-base dark:hover:text-textLight dark:text-whiteGray shrink w-full">
         {{placeholder}}
       </h6>
-      <h6 v-else class="text-lg font-semibold dark:hover:text-textLight dark:text-whiteGray shrink w-full">
+      <h6 v-else class="text-base font-semibold dark:hover:text-textLight dark:text-primary shrink w-full">
         {{selectedOption[placeholderFieldName]}}
       </h6>
       <Icon name="material-symbols:keyboard-arrow-down" class="text-2xl justify-self-end arrow-rotate" :class="isDropdownOpen ? 'rotate-180' : 'rotate-0' ">
@@ -75,7 +78,7 @@ watch(selectedOption, (current)=> {
       </Icon>
     </div>
     <div class="options-wrapper" :class="isDropdownOpen ? 'dropdown-is-open' : 'dropdown-is-closed'">
-      <div v-for="option in options" class="option" @click="selectOption(option)">
+      <div v-for="option in options" class="option" :class="option.value === selectedOption.value ? 'before-w-to-4 text-primary' : ''" @click="selectOption(option)">
           {{option.label}}
       </div>
     </div>
@@ -98,7 +101,7 @@ watch(selectedOption, (current)=> {
   transition: all 0.4s linear !important;
 }
 .option {
-  @apply py-2 pl-8 w-full cursor-pointer dark:before:bg-primary relative;
+  @apply py-2 pl-8 w-full cursor-pointer dark:before:bg-primary relative hover:text-primary transition-all duration-200;
 }
 
 .option::before {
@@ -113,6 +116,10 @@ watch(selectedOption, (current)=> {
 }
 
 .option:hover::before {
+  width: 4px;
+}
+
+.before-w-to-4::before {
   width: 4px;
 }
 

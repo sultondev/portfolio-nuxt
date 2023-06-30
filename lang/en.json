@@ -49,6 +49,16 @@
 
     "made_by": "Made by Sultonkhan Ablakulav.",
     "copy_rights":  "All rights reserved.",
-    "policy": "Privacy policy."
+    "policy": "Privacy policy.",
 
+    "contact_explanations": "Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to {email}",
+    "contact_follow": "Want to get connected? Follow me on the social channels below.",
+
+    "package_select": "Select a package",
+    "full_name": "Full Name",
+    "email": "Email address",
+    "package_hard_select": "Don't you have an idea to select a package?",
+    "message": "Message",
+
+    "send_message": "Send Message"
 }

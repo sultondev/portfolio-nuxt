@@ -1,13 +1,14 @@
 <script setup lang="ts">
 
 interface Props {
-  value: string;
+  defaultValue?: string;
   label: string;
-  type?: string
+  type?: string;
+  updateFieldName?: string
 }
 
 interface Emits {
-  'update:value': (value: string) => void;
+  'update:value': (value: string, fieldName?: string) => void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -16,26 +17,26 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emits = defineEmits<Emits>();
 
-const internalValue = ref(props.value)
+const internalValue = ref(props.defaultValue || '')
 
 const handleChange = (event: Event) => {
   const newValue = (event.target as HTMLInputElement).value;
   internalValue.value = newValue;
-  emits('update:value', newValue);
+  emits('update:value', newValue, props?.updateFieldName);
 };
 
 </script>
 
 <template>
   <div class="group relative flex items-center ">
-    <textarea class="input-self w-full text-base " :value="internalValue" @input="handleChange" />
+    <textarea class="input-self w-full text-base min-h-[80px]" :value="internalValue" @input="handleChange" />
     <div class="input-inactive-line">
 
     </div>
     <div class="input-active-line group-focus-within:w-full" :class="internalValue.length > 0 ? '!w-full' : 'w-0'">
 
     </div>
-    <div class="input-label group-focus-within:-top-6 dark:group-focus-within:!text-white" :class="internalValue.length > 0 ? '!-top-6' : 'top-0'">
+    <div class="input-label group-focus-within:-top-7 dark:group-focus-within:!text-white" :class="internalValue.length > 0 ? '!-top-7' : 'top-0'">
       {{label}}
     </div>
   </div>
