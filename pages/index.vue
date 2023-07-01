@@ -50,8 +50,8 @@ const { counter, doubleCounter } = storeToRefs(main)
               </DNuxtLink>
             </div>
           </div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
-               class="xl:w-[400px] xl:h-[300px] lg:w-[340px] lg:h-[260px] w-full min-h-[300px]"
+          <img src="../assets/images/about-picture.jpg"
+               class="xl:w-[400px] xl:h-[300px] object-cover lg:w-[340px] lg:h-[260px] w-full min-h-[300px]"
                alt="" />
         </div>
       </div>

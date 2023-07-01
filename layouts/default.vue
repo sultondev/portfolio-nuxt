@@ -45,8 +45,8 @@ watch(() => useColorMode().value, (current) =>{
         <div class="py-2 transition-all duration-500 lg:opacity-100 opacity-0" :class="{'opacity-100': menuOpen }">
           <div class="">
             <div class="w-[160px] h-[160px] mb-3 dark:bg-firstGray bg-white text-white mx-auto rounded-full flex justify-center items-center">
-              <!--            <img src="../assets/images/my-picture.jpeg" class="w-[160px] rounded-full" alt="">-->
-              <h6 class="text-7xl dark:text-white text-[#317355]">S</h6>
+                          <img src="../assets/images/my-picture.jpg" class="w-[160px] rounded-full" alt="">
+<!--              <h6 class="text-7xl dark:text-white text-[#317355]">S</h6>-->
             </div>
 
             <p class="font-light relative max-w-[260px] mx-auto lg:max-w-full mb-8 text-center text-white before:content-[''] before:block before:w-[2px] before:h-[100%] before:bg-white before:absolute before:l-[4px]">
