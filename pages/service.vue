@@ -7,7 +7,7 @@ import DTable from "~/components/UI/DTable.vue";
 import FaqCard from "~/components/Cards/FaqCard.vue";
 
 
-const {locale} = useI18n()
+const {locale, t} = useI18n()
 
 type ServiceType = {
   service_name: string
@@ -41,8 +41,8 @@ type PackageTranslateNamesType = {
 const selectedPackage = ref<PackageNamesType>('basic')
 const servicesData = ref<ServiceType[]>([
   {
-    service_name: "service_frontend",
-    service_sub: "service_frontend_sub",
+    service_name: t("service_frontend"),
+    service_sub: t("service_frontend_sub"),
     basic: {
       icon:"material-symbols:check-small-rounded",
       style: ''
@@ -61,11 +61,91 @@ const servicesData = ref<ServiceType[]>([
     }
   },
   {
-    service_name: "service_backend",
-    service_sub: "service_backend_sub",
+    service_name: t("service_backend"),
+    service_sub: t("service_backend_sub"),
     basic: {
       icon:"ic:round-minus",
-      style: 'color: #dc2626;'
+      style: 'color: #6c757d; font-size: 22px'
+    },
+    standard: {
+      icon: "material-symbols:check-small-rounded",
+      style: ''
+    },
+    premium: {
+      icon: "material-symbols:check-small-rounded",
+      style: ''
+    },
+    gold: {
+      icon: "material-symbols:check-small-rounded",
+      style: '',
+    }
+  },
+  {
+    service_name: t("service_spa"),
+    service_sub: t("service_spa_sub"),
+    basic: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px'
+    },
+    standard: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px'
+    },
+    premium: {
+      icon: "material-symbols:check-small-rounded",
+      style: ''
+    },
+    gold: {
+      icon: "material-symbols:check-small-rounded",
+      style: '',
+    }
+  },
+  {
+    service_name: t("service_backendapi"),
+    service_sub: t("service_backendapi_sub"),
+    basic: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px;'
+    },
+    standard: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px'
+    },
+    premium: {
+      icon: "material-symbols:check-small-rounded",
+      style: ''
+    },
+    gold: {
+      icon: "material-symbols:check-small-rounded",
+      style: '',
+    }
+  },
+  {
+    service_name: t("service_3d"),
+    service_sub: t("service_3d_sub"),
+    basic: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px;'
+    },
+    standard: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px;'
+    },
+    premium: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px;'
+    },
+    gold: {
+      icon: "material-symbols:check-small-rounded",
+      style: '',
+    }
+  },
+  {
+    service_name: t("service_adaptive"),
+    service_sub: t("service_adaptive_sub"),
+    basic: {
+      icon:"ic:round-minus",
+      style: 'color: #6c757d; font-size: 22px;'
     },
     standard: {
           icon: "material-symbols:check-small-rounded",
@@ -81,91 +161,11 @@ const servicesData = ref<ServiceType[]>([
     }
   },
   {
-    service_name: "service_spa",
-    service_sub: "service_spa_sub",
+    service_name: t("service_animation"),
+    service_sub: t("service_animation_sub"),
     basic: {
       icon:"ic:round-minus",
-      style: 'color: #dc2626;'
-    },
-    standard: {
-          icon: "material-symbols:check-small-rounded",
-          style: ''
-        },
-    premium: {
-      icon: "material-symbols:check-small-rounded",
-      style: ''
-    },
-    gold: {
-      icon: "material-symbols:check-small-rounded",
-      style: '',
-    }
-  },
-  {
-    service_name: "service_backendapi",
-    service_sub: "service_backendapi_sub",
-    basic: {
-      icon:"ic:round-minus",
-      style: 'color: #dc2626;'
-    },
-    standard: {
-          icon: "material-symbols:check-small-rounded",
-          style: ''
-        },
-    premium: {
-      icon: "material-symbols:check-small-rounded",
-      style: ''
-    },
-    gold: {
-      icon: "material-symbols:check-small-rounded",
-      style: '',
-    }
-  },
-  {
-    service_name: "service_3d",
-    service_sub: "service_3d_sub",
-    basic: {
-      icon:"ic:round-minus",
-      style: 'color: #dc2626;'
-    },
-    standard: {
-          icon: "material-symbols:check-small-rounded",
-          style: ''
-        },
-    premium: {
-      icon: "material-symbols:check-small-rounded",
-      style: ''
-    },
-    gold: {
-      icon: "material-symbols:check-small-rounded",
-      style: '',
-    }
-  },
-  {
-    service_name: "service_adaptive",
-    service_sub: "service_adaptive_sub",
-    basic: {
-      icon:"ic:round-minus",
-      style: 'color: #dc2626;'
-    },
-    standard: {
-          icon: "material-symbols:check-small-rounded",
-          style: ''
-        },
-    premium: {
-      icon: "material-symbols:check-small-rounded",
-      style: ''
-    },
-    gold: {
-      icon: "material-symbols:check-small-rounded",
-      style: '',
-    }
-  },
-  {
-    service_name: "service_animation",
-    service_sub: "service_animation_sub",
-    basic: {
-      icon:"ic:round-minus",
-      style: 'color: #dc2626;'
+      style: 'color: #6c757d; font-size: 22px'
     },
     standard: {
           icon: "material-symbols:check-small-rounded",
@@ -186,20 +186,20 @@ const packagePrices = ref({basic: "$200", standard: "$2000",premium: "$3800+", g
 const packegesDetails = ref({basic: "service_details_basic", standard: "service_details_standard",premium: "service_details_premium", gold: "service_details_gold"})
 const serviceNumData = ref([
   {
-    service_name: "service_revisions",
+    service_name: t("service_revisions"),
     service_sub: "service_revisions_sub",
     basic: '1',
     standard: "2",
     premium: "5+",
-    gold: "tech_support"
+    gold: t("tech_support")
   },
   {
-    service_name: "service_time",
-    service_sub: "service_time_sub",
-    basic: 'service_time_basic',
-    standard: "service_time_standard",
-    premium: "service_time_premium",
-    gold: "service_time_gold"
+    service_name: t("service_time"),
+    service_sub: t("service_time_sub"),
+    basic: t('service_time_basic'),
+    standard: t("service_time_standard"),
+    premium: t("service_time_premium"),
+    gold: t("service_time_gold")
   },
 ])
 
@@ -273,19 +273,19 @@ function selectPackage(packageName: PackageNamesType) {
               {{$t('service_details')}}
             </th>
 
-            <td v-for="item in Object.values(packegesDetails)" class="xl:table-cell hidden" :key="item">
+            <td v-for="item in Object.values(packegesDetails)" class="xl:table-cell hidden text-sm" :key="item">
               {{$t(item)}}
             </td>
-            <td class="table-cell xl:hidden">
+            <td class="table-cell xl:hidden text-sm">
               {{$t(packegesDetails[selectedPackage])}}
             </td>
           </tr>
           <tr v-for="serviceItem in servicesData" class="hidden xl:table-row">
             <th>
-              <div class="">
+              <div class="text-sm">
                 {{serviceItem.service_name}}
               </div>
-              <div class="">
+              <div class="font-normal text-xs dark:text-graySub">
                 {{serviceItem.service_sub}}
               </div>
             </th>
@@ -293,13 +293,13 @@ function selectPackage(packageName: PackageNamesType) {
               <Icon :name="serviceItem.basic.icon" class="text-3xl text-primary" :style="serviceItem.basic.style" />
             </td>
             <td>
-              <Icon :name="serviceItem.standard.icon" class="text-3xl text-primary" />
+              <Icon :name="serviceItem.standard.icon" class="text-3xl text-primary" :style="serviceItem.standard.style" />
             </td>
             <td>
-              <Icon :name="serviceItem.premium.icon" class="text-3xl text-primary" />
+              <Icon :name="serviceItem.premium.icon" class="text-3xl text-primary" :style="serviceItem.premium.style" />
             </td>
             <td>
-              <Icon :name="serviceItem.gold.icon" class="text-3xl text-primary" />
+              <Icon :name="serviceItem.gold.icon" class="text-3xl text-primary" :style="serviceItem.gold.style" />
             </td>
           </tr>
 
@@ -312,29 +312,23 @@ function selectPackage(packageName: PackageNamesType) {
             </td>
           </tr>
 
-          <tr v-for="serviceItem in serviceNumData" class="hidden xl:table-row">
-            <th>
+          <tr v-for="serviceItem in serviceNumData" class="">
+            <th class="hidden xl:table-cell">
               {{serviceItem.service_name}}
             </th>
-            <td>
+            <td class="hidden xl:table-cell">
               {{serviceItem.basic}}
             </td>
-            <td>
+            <td class="hidden xl:table-cell">
               {{serviceItem.standard}}
             </td>
-            <td>
+            <td class="hidden xl:table-cell">
               {{serviceItem.premium}}
             </td>
-            <td>
+            <td class="hidden xl:table-cell text-sm">
               {{serviceItem.gold}}
             </td>
-          </tr>
-
-          <tr v-for="serviceItem in serviceNumData" :key="serviceItem.service_sub" class="xl:hidden table-row">
-            <th>
-              {{serviceItem.service_name}}
-            </th>
-            <td>
+            <td class="xl:hidden table-cell text-sm">
               {{serviceItem[selectedPackage]}}
             </td>
           </tr>

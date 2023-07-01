@@ -63,5 +63,37 @@
     "send_message": "Xabar Jo'natish",
 
     "summary_projects": "loyihalarimni",
-    "summary_resume": "rezyume"
+    "summary_resume": "rezyume",
+
+    "service_frontend": "Front-End",
+    "service_frontend_sub": "PSD yoki Figma dizaynlarini frontend kodga o'tkazish.",
+
+    "service_backend": "Back-End",
+    "service_backend_sub": "Node JS (Express JS) bilan ma'lumotlarni saqlash va autentifikatsiya qilish bilan Statik Backend.",
+
+    "service_spa":  "Dinamik Frontend (Vue JS, React JS)",
+    "service_spa_sub": "Endi qayta yuklash kerak emas. Sahifalar tezkor va foydalanuvchilar uchun qulay.",
+
+    "service_backendapi":  "Bekend (API asosida)",
+    "service_backendapi_sub": "API-ga asoslangan backend - Statik Backend-ga qaraganda tezroq va zamonaviyroq.",
+
+    "service_3d":  "Veb-saytlar uchun 3D obyekt integratsiyasi (Three.jS)",
+    "service_3d_sub": "Obyekt integratsiyasi bilan web-saytingizni ajoyib 3D tajribasiga aylantiring.",
+
+    "service_adaptive":  "Har qanday qurilma uchun moskeluvchi veb-sayt",
+    "service_adaptive_sub": "Barcha qurilmalarda ekran hajmiga moskeluvchi web-dizaynga ega foydalanuvchi interfeysi.",
+
+    "service_animation":  "Sayt uchun individual web-animatsiya",
+    "service_animation_sub": "Ko'zni qamashtiruvchi va dinamik animatsiyalar yordamida web-saytingizning vizual jozibadorligini oshiring",
+
+    "service_revisions":  "Tuzatmalar",
+    "service_time": "Yetqazib Berish Vaqti",
+
+    "service_details_gold": "Texnik qo'llab-quvvatlash bilan juda ehtiyotkorlik bilan sinovdan o'tgan murakkab web-ilova.",
+    "tech_support": "Malum bir muddatga texnik yordam",
+
+    "service_time_basic": "9 kun",
+    "service_time_standard":  "28 kun",
+    "service_time_premium": "1-2 oy",
+    "service_time_gold":  "3-4 oy"
 }

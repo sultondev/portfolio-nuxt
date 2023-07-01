@@ -63,5 +63,38 @@
     "send_message": "Send Message",
 
     "summary_projects": "projects",
-    "summary_resume": "resume"
+    "summary_resume": "resume",
+
+    "service_frontend": "Front-End",
+    "service_frontend_sub": "Conversion of your PSD or Figma layouts (designs) to frontend code.",
+
+    "service_backend": "Back-End",
+    "service_backend_sub": "Static Backend with data saving and authentication with Node JS (Express JS).",
+
+    "service_spa":  "Dynamic Frontend (Vue.js, React.js)",
+    "service_spa_sub": "No reloading anymore. Pages are fast and user friendly.",
+
+    "service_backendapi":  "API-based Backend",
+    "service_backendapi_sub": "Backend that is based on API's - more fast and modern than Static Backend.",
+
+    "service_3d":  "3D Object integration for the website (Three.jS)",
+    "service_3d_sub": "Transform Your Website into a captivating 3D experience with seamless object integration",
+
+    "service_adaptive":  "Responsive website for any device",
+    "service_adaptive_sub": "User experiences across all devices with Adaptive Web Design",
+
+    "service_animation":  "Web animations for the website's vision",
+    "service_animation_sub": "Elevate the website's visual appeal with engaging and dynamic animations",
+
+    "service_revisions":  "Revisions",
+    "service_time": "Delivery Time",
+
+    "service_details_gold": "Very carefully tested complex web-app with tech support.",
+    "tech_support": "Time-limited tech support",
+
+    "service_time_basic": "9 days",
+    "service_time_standard":  "28 days",
+    "service_time_premium": "1-2 months",
+    "service_time_gold":  "3-4 months"
+
 }

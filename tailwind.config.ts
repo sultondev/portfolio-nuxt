@@ -20,6 +20,7 @@ module.exports = {
                 primaryDarkHover: '#317355',
                 darkPrimaryHover: '#49a778',
                 primaryDarker: '#317355',
+                graySub: '#6c757d',
                 firstGray: '#111821',
                 secondGray: '#1e2a3a',
                 grayLighter: '#384f6c',
