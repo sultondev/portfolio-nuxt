@@ -10,6 +10,7 @@ import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 const {locale, availableLocales, strategy} = useI18n()
 const menuOpen = ref(false)
 const themeColors: any = ref(null)
+const route = useRoute()
 
 function toggle() {
   menuOpen.value = !menuOpen.value
@@ -23,6 +24,10 @@ if(process.client) {
 
 watch(() => useColorMode().value, (current) =>{
   themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
+})
+
+watch(route, () => {
+  menuOpen.value = false
 })
 
 </script>
