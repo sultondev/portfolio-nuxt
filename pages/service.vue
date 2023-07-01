@@ -313,7 +313,7 @@ function selectPackage(packageName: PackageNamesType) {
           </tr>
 
           <tr v-for="serviceItem in serviceNumData" class="">
-            <th class="hidden xl:table-cell">
+            <th class="">
               {{serviceItem.service_name}}
             </th>
             <td class="hidden xl:table-cell">
