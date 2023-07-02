@@ -13,10 +13,23 @@ import BlogItemCard from "~/components/Cards/BlogItemCard.vue";
 
 import {btnDefaultClasses, linkDefaulClasses} from "~/constants/UI/DNuxtLink"
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const main = useMainStore()
 // extract specific store properties
 const { counter, doubleCounter } = storeToRefs(main)
+
+const metaTitle = ref(t('portfolio_meta_title'))
+const metaOgTitle = ref(t('portfolio_meta_og_title'))
+const metaOgDescription = ref(t('portfolio_meta_og_description'))
+const metaOg = ref(t('portfolio_meta_og_description'))
+
+useServerSeoMeta({
+  title: metaTitle.value,
+  ogTitle: metaOgTitle.value,
+  description: 'This is my amazing site, let me tell you all about it.',
+  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  ogImage: './neon-think-icons-none-brand.png',
+})
 
 
 </script>

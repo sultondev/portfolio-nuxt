@@ -16,8 +16,6 @@ function toggle() {
   menuOpen.value = !menuOpen.value
 }
 
-
-
 if(process.client) {
   themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
 }
