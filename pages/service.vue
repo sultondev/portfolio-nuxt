@@ -9,6 +9,14 @@ import FaqCard from "~/components/Cards/FaqCard.vue";
 
 const {locale, t} = useI18n()
 
+const metaTitle = ref(t('portfolio_meta_service_title'))
+
+useSeoMeta({
+  title: metaTitle.value,
+  ogTitle: metaTitle.value,
+  ogType: "website",
+})
+
 type ServiceType = {
   service_name: string
   service_sub: string

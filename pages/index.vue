@@ -18,11 +18,12 @@ const main = useMainStore()
 // extract specific store properties
 const { counter, doubleCounter } = storeToRefs(main)
 
-const metaTitle = ref(t('portfolio_meta_title'))
+const metaTitle = ref(t('portfolio_meta_about_title'))
 
 useSeoMeta({
   title: metaTitle.value,
-  ogType: "profile",
+  ogTitle: metaTitle.value,
+  ogType: "website",
 })
 
 

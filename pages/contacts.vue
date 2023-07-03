@@ -8,6 +8,15 @@ import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 import {useI18n} from "#imports";
 import DButton from "~/components/UI/DButton.vue";
 const {t} = useI18n()
+
+const metaTitle = ref(t('portfolio_meta_contacts_title'))
+
+useSeoMeta({
+  title: metaTitle.value,
+  ogTitle: metaTitle.value,
+  ogType: "website",
+})
+
 const submitData = reactive({
   fullname: '',
   email: '',

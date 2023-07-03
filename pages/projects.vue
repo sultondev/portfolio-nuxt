@@ -8,7 +8,16 @@ import {useI18n} from "#imports";
 
 
 
-const {locale} = useI18n()
+const {locale, t} = useI18n()
+
+const metaTitle = ref(t('portfolio_meta_projects_title'))
+
+useSeoMeta({
+  title: metaTitle.value,
+  ogTitle: metaTitle.value,
+  ogType: "website",
+})
+
 </script>
 
 <template>
