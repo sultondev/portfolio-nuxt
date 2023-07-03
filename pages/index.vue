@@ -28,7 +28,7 @@ useServerSeoMeta({
   ogTitle: metaOgTitle.value,
   description: 'This is my amazing site, let me tell you all about it.',
   ogDescription: 'This is my amazing site, let me tell you all about it.',
-  ogImage: './neon-think-icons-none-brand.png',
+  ogImage: 'https://media.licdn.com/dms/image/D4D22AQEPLzt9l-pOXg/feedshare-shrink_2048_1536/0/1688331795181?e=1691020800&v=beta&t=sZrEm1xBU0H16SY3zC7JS9TmDx3nLy0vEYzMUJ-sIQw',
 })
 
 
