@@ -203,7 +203,7 @@ const serviceNumData = ref([
   },
   {
     service_name: t("service_time"),
-    service_sub: t("service_time_sub"),
+    service_sub: "service_time_sub",
     basic: t('service_time_basic'),
     standard: t("service_time_standard"),
     premium: t("service_time_premium"),
