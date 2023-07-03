@@ -19,17 +19,10 @@ const main = useMainStore()
 const { counter, doubleCounter } = storeToRefs(main)
 
 const metaTitle = ref(t('portfolio_meta_title'))
-const metaOgTitle = ref(t('portfolio_meta_og_title'))
-const description = ref(t('portfolio_meta_description'))
-const metaOgDescription = ref(t('portfolio_meta_og_description'))
-const metaOg = ref(t('portfolio_meta_og_description'))
 
 useSeoMeta({
   title: metaTitle.value,
-  ogTitle: metaOgTitle.value,
-  description: description.value,
-  ogDescription: metaOgDescription.value,
-  ogImage: 'https://media.licdn.com/dms/image/D4D22AQEPLzt9l-pOXg/feedshare-shrink_2048_1536/0/1688331795181?e=1691020800&v=beta&t=sZrEm1xBU0H16SY3zC7JS9TmDx3nLy0vEYzMUJ-sIQw',
+  ogType: "profile",
 })
 
 
