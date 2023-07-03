@@ -1,7 +1,29 @@
 <script setup lang="ts">
 
-import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
-import DNuxtLink from "~/components/UI/DNuxtLink.vue";
+const {t} = useI18n()
+const metaOgTitle = ref(t('portfolio_meta_og_title'))
+const description = ref(t('portfolio_meta_description'))
+const metaOgDescription = ref(t('portfolio_meta_og_description'))
+const metaOg = ref(t('portfolio_meta_og_description'))
+
+
+useServerSeoMeta({
+  ogTitle: '404 not found',
+  description: '404 not found',
+  ogDescription: '404 not found',
+  ogImage: 'https://webartdevelopers.com/blog/wp-content/uploads/2018/09/HTML-Retro-Error-Page.png',
+  'og:image:height': '1000',
+  keywords: '404 not found',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  // twitterDomain: '',
+  // twitterUrl: '',
+  twitterTitle: '404 not found',
+  twitterDescription: '404 not found',
+  twitterImage: 'https://webartdevelopers.com/blog/wp-content/uploads/2018/09/HTML-Retro-Error-Page.png'
+})
+
+
 
 type Props = {
   error: {
