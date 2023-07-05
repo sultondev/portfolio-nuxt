@@ -5,7 +5,7 @@ import DTextarea from "~/components/UI/DTextarea.vue";
 import DDropdownSelect from "~/components/UI/DDropdownSelect.vue";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
-import {useI18n} from "#imports";
+import { useI18n} from "#imports";
 import DButton from "~/components/UI/DButton.vue";
 const {t} = useI18n()
 
@@ -16,6 +16,7 @@ useSeoMeta({
   ogTitle: metaTitle.value,
   ogType: "website",
 })
+
 
 const submitData = reactive({
   fullname: '',
@@ -40,7 +41,8 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
 </script>
 
 <template>
-  <div class="">
+  <KeepAlive>
+    <div class="">
     <div class="section-bottom__border bg-[#fafafa] dark:bg-transparent ">
       <div class="section-container">
         <div class="text-center px-4">
@@ -109,6 +111,7 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
     </div>
 
   </div>
+  </KeepAlive>
 </template>
 
 
