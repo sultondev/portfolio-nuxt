@@ -1,0 +1,28 @@
+.observable
+  opacity: 0
+  pointer-events: none
+  // transition: 0.4s ease-in-out all
+  &.intersected
+    animation: intersectedAnimation 0.4s ease-in-out forwards
+
+
+.grid-cols-2.observable
+  align-self: center
+  justify-self: center
+
+.grid-cols-3.observable
+  align-self: center
+  justify-self: center
+
+
+@keyframes intersectedAnimation
+  from
+    transform: translateY(40px)
+    opacity: 0
+    pointer-events: none
+
+  to
+    transform: translateY(0px)
+    opacity: 1
+    pointer-events: all
+

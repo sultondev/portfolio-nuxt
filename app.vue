@@ -33,3 +33,8 @@ useServerSeoMeta({
     </NuxtLayout>
   </div>
 </template>
+
+
+<style lang="sass">
+@import "./assets/css/root.sass"
+</style>
