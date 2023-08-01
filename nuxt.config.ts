@@ -3,11 +3,12 @@ import TranslateModule from './modules/i18n'
 export default defineNuxtConfig({
     modules: [
         TranslateModule,
+        '@nuxt/image',
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
         '@pinia/nuxt',
         '@nuxtjs/i18n',
-        'nuxt-icon'
+        'nuxt-icon',
     ],
     colorMode: {
         preference: "dark",
@@ -20,6 +21,9 @@ export default defineNuxtConfig({
         exposeConfig: false,
         injectPosition: 0,
         viewer: true,
+    },
+    image: {
+        quality: 10,
     },
     i18n: {
         lazy: false,

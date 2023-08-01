@@ -64,7 +64,7 @@ onMounted(() => {
               </DNuxtLink>
             </div>
           </div>
-          <img src="../assets/images/about-picture.jpg"
+          <nuxt-img src="/about-picture.webp"
                class="xl:w-[400px] xl:h-[300px] object-cover observable lg:w-[340px] lg:h-[260px] w-full min-h-[300px]"
                alt="" />
         </div>
