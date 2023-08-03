@@ -11,6 +11,7 @@ function switchTheme() {
     <div class="w-[74px] mx-auto rounded-full border-[3px] dark:border-primary flex cursor-pointer" @click="switchTheme()">
       <button class="theme-switcher__btn dark:bg-primary bg-white m-1 rounded-full "
               ref="themeBtn"
+              aria-label="themeBtn"
         :class="[useColorMode().value === 'light' ? 'light-button translate-x-[100%]' : 'dark-button translate-x-0']"
       >
       </button>

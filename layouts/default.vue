@@ -37,7 +37,7 @@ watch(route, () => {
     <div class="relative  sm:min-w-[280px]">
       <client-only>
        <section class="menu-sidebar dark:bg-secondGray bg-primary lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }" :style="{'--thumb-clr': useColorMode().value === 'dark' ? '#35404e': '#43926e'}">
-      <button class="lg:hidden absolute" @click="toggle">
+      <button class="lg:hidden absolute" aria-label="toggle mobile menu" @click="toggle">
         <div id="nav-icon4" :class="menuOpen ? 'open' : ''">
           <span></span>
           <span></span>
@@ -60,16 +60,16 @@ watch(route, () => {
               </span>
             </p>
             <div class="flex lg:w-full justify-between md:max-w-[300px] md:justify-between max-w-[240px] mx-auto px-3">
-              <a href="https://linkedin.com/in/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+              <a href="https://linkedin.com/in/sultondev" aria-label="linkedin account icon" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="dark:text-white text-primary" size="22px" name="ri:linkedin-box-fill"></Icon>
               </a>
-              <a href="https://github.com/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+              <a href="https://github.com/sultondev" aria-label="linkedin account icon" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="dark:text-white text-primary" size="22px" name="uiw:github"></Icon>
               </a>
-              <a href="https://t.me/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+              <a href="https://t.me/sultondev" aria-label="linkedin account icon" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="dark:text-white text-primary" size="22px" name="uil:telegram"></Icon>
               </a>
-              <a href="https://instagram.com/sultondev" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
+              <a href="https://instagram.com/sultondev" aria-label="linkedin account icon" target="_blank" rel="noopener noreferrer" class="dark:bg-primary bg-white dark:hover:bg-primaryLight hover:bg-grayLight transition-all duration-200 p-1.5 rounded-full flex items-center justify-center">
                 <Icon class="dark:text-white text-primary" size="22px" name="uil:instagram"></Icon>
               </a>
             </div>
@@ -116,7 +116,7 @@ watch(route, () => {
                     {{ $t('my_contacts')}}
                   </span>
                 </nuxt-link>
-                <button class="nav-links__item">
+                <button class="nav-links__item" aria-label="more">
                   <Icon class="text-[20px] mr-2" name="mdi:cogs" />
                   <span class="text-lg font-semibold">
                     {{ $t('more')}}

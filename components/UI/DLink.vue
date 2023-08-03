@@ -25,7 +25,7 @@ const props =  withDefaults(defineProps<Props>(), {
 
 
 <template>
-  <a :href="props.url" rel="noreferrer" :class="[btnDefaultClass,props.classes]">
+  <a :href="props.url" rel="noreferrer" :aria-label="props.message"  :class="[btnDefaultClass,props.classes]">
     <slot />
     <span class="">{{props.message}}</span>
   </a>
