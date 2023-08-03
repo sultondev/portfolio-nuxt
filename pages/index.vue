@@ -66,7 +66,7 @@ onMounted(() => {
           </div>
           <nuxt-img src="/about-picture.webp"
                class="xl:w-[400px] xl:h-[300px] object-cover observable lg:w-[340px] lg:h-[260px] w-full min-h-[300px]"
-               alt="my picture" width="100" />
+               alt="my picture" width="1000" />
         </div>
       </div>
     </div>
