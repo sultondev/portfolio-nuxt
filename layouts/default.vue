@@ -25,7 +25,9 @@ watch(() => useColorMode().value, (current) =>{
 })
 
 watch(route, () => {
-  menuOpen.value = false
+  if(menuOpen.value && process.client) {
+    menuOpen.value = false
+  }
 })
 
 </script>
