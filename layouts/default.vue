@@ -34,7 +34,7 @@ watch(route, () => {
 onMounted(async() => {
   await setTimeout(() => {
   if(process.client) loading.value = false
-  }, 3000)
+  }, 2000)
 
 })
 
