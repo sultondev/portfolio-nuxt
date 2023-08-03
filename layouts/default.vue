@@ -50,7 +50,7 @@ watch(route, () => {
         <div class="py-2 transition-all duration-500 lg:opacity-100 opacity-0" :class="{'opacity-100': menuOpen }">
           <div class="">
             <div class="w-[160px] h-[160px] mb-3 dark:bg-firstGray bg-white text-white mx-auto rounded-full flex justify-center items-center">
-                          <nuxt-img src="/my-picture.webp" class="w-[160px] rounded-full" format="webp" alt="" />
+                          <nuxt-img src="/my-picture.webp" class="w-[160px] rounded-full" format="webp" alt="my picture sidebar" sizes="160px" />
 <!--              <h6 class="text-7xl dark:text-white text-[#317355]">S</h6>-->
             </div>
 
