@@ -6,12 +6,13 @@ import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "../.nuxt/imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
+import Loading from "~/components/loading.vue";
 
 const {locale, availableLocales, strategy} = useI18n()
 const menuOpen = ref(false)
 const themeColors: any = ref(null)
 const route = useRoute()
-
+const loading = ref(true)
 function toggle() {
   menuOpen.value = !menuOpen.value
 }
@@ -26,13 +27,21 @@ watch(() => useColorMode().value, (current) =>{
 
 watch(route, () => {
   if(menuOpen.value && process.client) {
-    menuOpen.value = false
+      menuOpen.value = false
   }
+})
+
+onMounted(async() => {
+  await setTimeout(() => {
+  if(process.client) loading.value = false
+  }, 3000)
+
 })
 
 </script>
 
 <template>
+  <Loading :is-loading="loading" />
   <div class="lg:flex dark:text-textLight dark:bg-firstGray text-pDark">
     <div class="relative  sm:min-w-[280px]">
       <client-only>
