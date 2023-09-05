@@ -19,17 +19,18 @@ function toggle() {
 
 if(process.client) {
   themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
+  watch(() => useColorMode().value, (current) =>{
+    themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
+  })
+
+  watch(route, () => {
+    if(menuOpen.value && process.client) {
+        menuOpen.value = false
+    }
+  })
 }
 
-watch(() => useColorMode().value, (current) =>{
-  themeColors.value = {'--active-link-clr': useColorMode().value === 'light' ? 'rgba(0,0,0,0.6)' : '#54b689'}
-})
 
-watch(route, () => {
-  if(menuOpen.value && process.client) {
-      menuOpen.value = false
-  }
-})
 
 onMounted(async() => {
   await setTimeout(() => {
