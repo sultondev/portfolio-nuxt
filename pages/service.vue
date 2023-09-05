@@ -347,7 +347,7 @@ function selectPackage(packageName: PackageNamesType) {
             <td></td>
 
             <td>
-              <DNuxtLink :path="{name: 'contacts', query: {query: 'package'}}" :message="$t('service_book')" class="hire__link hover:!bg-primaryHover bg-primary block w-fit mx-auto px-4" :classes="[linkDefaulClasses]">
+              <DNuxtLink arial-label="check my tariff" :path="{name: 'contacts', query: {query: 'package'}}" :message="$t('service_book')" class="hire__link hover:!bg-primaryHover bg-primary block w-fit mx-auto px-4" :classes="[linkDefaulClasses]">
               </DNuxtLink>
             </td>
             <td>

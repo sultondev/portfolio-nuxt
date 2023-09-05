@@ -33,7 +33,7 @@ useSeoMeta({
               {{$t('projects_substring')}}
             </p>
 
-            <DNuxtLink path="/service" :message="$t('hire_me')" class="hire__link hover:!bg-primaryHover bg-primary block w-fit mx-auto px-4" :classes="[linkDefaulClasses]">
+            <DNuxtLink arial-label="check my services" path="/service" :message="$t('hire_me')" class="hire__link hover:!bg-primaryHover bg-primary block w-fit mx-auto px-4" :classes="[linkDefaulClasses]">
               <Icon name="cib:telegram-plane" class="mr-2" />
             </DNuxtLink>
           </div>

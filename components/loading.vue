@@ -42,28 +42,32 @@ const props = withDefaults(defineProps<Props>(), {
 <style>
 
 .logo-container {
-  @apply w-full h-screen fixed top-0 left-0 flex justify-center items-center bg-black;
+  @apply w-full transition-all duration-1000 h-screen fixed top-0 left-0 flex justify-center items-center bg-black;
 }
 
 .logo-hidden {
   @apply opacity-0 invisible;
 }
 
+.logo-hidden #logo path{
+  @apply animate-none;
+}
+
 #logo path{
-  animation: linear 2500ms show-up infinite;
-  transition: all 0.3s linear;
+  animation: linear 1600ms show-up infinite;
+  transition: all 0.2s linear;
 }
 
 
 @keyframes show-up {
   0%{
-    stroke-width: 0.4px;
+    stroke-width: 0.1px;
   }
   50% {
-    stroke-width: 6px;
+    stroke-width: 7px;
   }
   100%{
-    stroke-width: 0.4px;
+    stroke-width: 0.1px;
   }
 }
 

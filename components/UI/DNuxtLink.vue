@@ -9,6 +9,7 @@ type Props = {
   classes?: string | string[]
   iconClass?: '',
   path: string | object,
+  arialLabel: string
 }
 
 const props =  withDefaults(defineProps<Props>(), {
@@ -16,7 +17,8 @@ const props =  withDefaults(defineProps<Props>(), {
   classes: '',
   iconName: '',
   iconClass: '',
-  path: '/'
+  path: '/',
+  arialLabel: ''
 })
 
 
@@ -24,7 +26,7 @@ const props =  withDefaults(defineProps<Props>(), {
 
 
 <template>
-  <nuxt-link :to="localePath(props.path)" :aria-label="props.message" :class="[props.classes, 'whitespace-nowrap']">
+  <nuxt-link :to="localePath(props.path)" aria-label="check my links" :class="[props.classes, 'whitespace-nowrap']">
     <slot />
     <span class="whitespace-nowrap">{{props.message}}</span>
     <slot name="after-icon" />

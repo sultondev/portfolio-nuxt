@@ -49,17 +49,17 @@ onMounted(() => {
                 class="dark:text-grayLight text-pDark text-base mb-4"
             >
               <template #resume>
-                <DNuxtLink :path="localePath('/resume')" :message="$t('summary_resume')" :classes="[linkDefaulClasses]" />
+                <DNuxtLink arial-label="check my resume" :path="localePath('/resume')" :message="$t('summary_resume')" :classes="[linkDefaulClasses]" />
               </template>
               <template #projects>
-                <DNuxtLink :path="localePath('/projects')" :message="$t('summary_projects')" :classes="[linkDefaulClasses]" />
+                <DNuxtLink arial-label="check my projects" :path="localePath('/projects')" :message="$t('summary_projects')" :classes="[linkDefaulClasses]" />
               </template>
             </i18n-t>
             <div class="flex sm:flex-row flex-col h-fit lg:mb-0 mb-20 observable">
-              <DNuxtLink path="/projects" :message="$t('check_projects')" class="sm:mb-0 mb-4 text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
+              <DNuxtLink arial-label="check my projects" path="/projects" :message="$t('check_projects')" class="sm:mb-0 mb-4 text-base  2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
                 <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
               </DNuxtLink>
-              <DNuxtLink path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-3 mr-3 rounded font-bold py-2 text-white" classes="flex justify-start max-w-fit transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
+              <DNuxtLink arial-label="check my resume" path="/resume" :message="$t('check_resume')" class="text-base  2xl:px-4 xl:px-3 px-3 mr-3 rounded font-bold py-2 text-white" classes="flex justify-start max-w-fit transition-all duration-800 linear dark:bg-grayLighter dark:hover:bg-grayLightHover bg-pDark hover:bg-pDarkHover">
                 <Icon name="mdi:file-document-multiple" class="mr-2 text-2xl" />
               </DNuxtLink>
             </div>
@@ -89,7 +89,7 @@ onMounted(() => {
           />
         </div>
         <div class="w-full observable">
-          <DNuxtLink path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" :classes="btnDefaultClasses">
+          <DNuxtLink arial-label="check my services" path="/service" :message="$t('check_service')" class="text-base block mx-auto 2xl:px-4 xl:px-3 px-2 rounded font-bold py-2" :classes="btnDefaultClasses">
             <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
           </DNuxtLink>
         </div>
@@ -106,7 +106,7 @@ onMounted(() => {
           <FtProjectCard class="md:px-6 md:py-12 sm:p-4 py-6 observable" />
         </div>
         <div class="w-fit mx-auto">
-          <DNuxtLink path="/projects" :message="$t('check_projects')" :classes="btnDefaultClasses" class="observable text-base 2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2">
+          <DNuxtLink arial-label="check my projects" path="/projects" :message="$t('check_projects')" :classes="btnDefaultClasses" class="observable text-base 2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2">
             <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
           </DNuxtLink>
         </div>
@@ -124,7 +124,7 @@ onMounted(() => {
         </div>
 
         <div class="w-fit mx-auto">
-          <DNuxtLink path="/blog" :message="$t('blog')" class="text-base observable 2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
+          <DNuxtLink arial-label="check my blog page" path="/blog" :message="$t('blog')" class="text-base observable 2xl:px-4 xl:px-3 px-2 mr-3 rounded font-bold py-2" :classes="[btnDefaultClasses]">
             <Icon name="ic:baseline-arrow-circle-right" class="mr-2 text-2xl" />
           </DNuxtLink>
         </div>

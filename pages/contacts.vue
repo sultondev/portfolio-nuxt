@@ -95,7 +95,7 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
         </DInput>
 
         <DDropdownSelect class="mx-auto mb-4" :options="packageOptions" :placeholder="$t('package_select')" @update:value="updateSubmitData" update-field-name="package" />
-        <DNuxtLink :path="localePath('/service')" :message="$t('package_hard_select')" class="block text-center mb-16" :classes="[linkDefaulClasses]">
+        <DNuxtLink arial-label="check my services" :path="localePath('/service')" :message="$t('package_hard_select')" class="block text-center mb-16" :classes="[linkDefaulClasses]">
 
         </DNuxtLink>
 

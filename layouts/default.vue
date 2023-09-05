@@ -42,7 +42,7 @@ onMounted(async() => {
 
 <template>
   <Loading :is-loading="loading" />
-  <div class="lg:flex dark:text-textLight dark:bg-firstGray text-pDark">
+  <div class="lg:flex dark:text-textLight dark:bg-firstGray text-pDark " :class="{'max-h-screen overflow-hidden': loading}">
     <div class="relative  sm:min-w-[280px]">
       <client-only>
        <section class="menu-sidebar dark:bg-secondGray bg-primary lg:fixed w-full min-h-fit lg:w-[280px] py-6 px-5 lg:min-h-screen overflow-hidden lg:overflow-y-scroll  transition-all duration-500 lg:max-h-full" :class="{'menu-hide': !menuOpen, 'menu-open': menuOpen }" :style="{'--thumb-clr': useColorMode().value === 'dark' ? '#35404e': '#43926e'}">
@@ -134,7 +134,7 @@ onMounted(async() => {
 
               </nav>
 
-            <DNuxtLink path="/projects" :message="$t('hire_me')" class="hire__link hover:!bg-[#224f3a] !bg-[#317355] block !min-w-full" :classes="[linkDefaulClasses]">
+            <DNuxtLink arial-label="check my projects" path="/projects" :message="$t('hire_me')" class="hire__link hover:!bg-[#224f3a] !bg-[#317355] block !min-w-full" :classes="[linkDefaulClasses]">
               <Icon name="cib:telegram-plane" class="mr-2" />
             </DNuxtLink>
           </div>
@@ -175,7 +175,7 @@ onMounted(async() => {
       </client-only>
 
     </div>
-    <div class="w-full h-full  min-h-screen flex flex-col justify-between">
+    <div class="main-content w-full h-full min-h-screen flex flex-col justify-between">
       <slot />
       <Footer />
     </div>
@@ -224,6 +224,18 @@ onMounted(async() => {
 
 .menu-sidebar::-webkit-scrollbar-thumb {
   background: var(--thumb-clr);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-primary);
 }
 
 

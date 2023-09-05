@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
       <div class="xl:mb-8 lg:mb-6 mb-4 text-sm font-bold dark:text-grayLight">
         Language: English
       </div>
-      <DNuxtLink path="/projects" :message="$t('read_more')" class="" :classes="[linkDefaulClasses, 'hover:underline']">
+      <DNuxtLink arial-label="check my projects" path="/projects" :message="$t('read_more')" class="" :classes="[linkDefaulClasses, 'hover:underline']">
         <template #after-icon>
           <Icon name="ic:baseline-arrow-right-alt" class="mr-2 text-xl" />
         </template>
