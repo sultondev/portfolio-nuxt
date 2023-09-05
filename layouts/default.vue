@@ -24,6 +24,7 @@ if(process.client) {
   })
 
   watch(route, () => {
+    console.log('finding bug on deployment')
     if(menuOpen.value && process.client) {
         menuOpen.value = false
     }
