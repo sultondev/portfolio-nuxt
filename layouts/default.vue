@@ -81,8 +81,10 @@ if (process.client) {
               Sultonkhan Ablakulav
             </h6>
             <div
-              :class="{ 'opacity-100': menuOpen }"
-              class="py-2 transition-all duration-500 lg:opacity-100 opacity-0"
+              :class="[
+                'py-2 transition-all duration-500 lg:opacity-100 lg:block',
+                menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible',
+              ]"
             >
               <div class="">
                 <div
@@ -326,7 +328,7 @@ if (process.client) {
 }
 
 .menu-hide {
-  @apply max-h-20 h-20;
+  @apply max-h-20;
 }
 
 .icons-enter-active,
