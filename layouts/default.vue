@@ -326,7 +326,7 @@ if (process.client) {
 }
 
 .menu-hide {
-  @apply max-h-[80px];
+  @apply max-h-20 h-20;
 }
 
 .icons-enter-active,
