@@ -83,7 +83,7 @@ if (process.client) {
             <div
               :class="[
                 'py-2 transition-all duration-500 lg:opacity-100 lg:block',
-                menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible',
+                menuOpen ? 'opacity-100 block' : 'opacity-0 hidden',
               ]"
             >
               <div class="">
