@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-    .menu-hide {
-        @apply max-h-[81px];
-    }
-
     .menu-open {
         @apply max-h-[1043px];
+    }
+
+    .menu-hide {
+        @apply max-h-[80px];
     }
 }
 
