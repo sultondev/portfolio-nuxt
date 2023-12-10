@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .menu-open {
-        @apply max-h-[1043px];
-    }
-
-    .menu-hide {
-        @apply max-h-[80px];
-    }
-}
 
 :root {
     --clr-primary: #54b689;

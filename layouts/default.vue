@@ -4,7 +4,6 @@ import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import { useColorMode } from "../.nuxt/imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import { linkDefaulClasses } from "~/constants/UI/DNuxtLink";
-import Loading from "~/components/loading.vue";
 
 const { locale, availableLocales, strategy } = useI18n();
 const menuOpen = ref(false);
@@ -16,34 +15,36 @@ function toggle() {
   menuOpen.value = !menuOpen.value;
 }
 
-if (process.client) {
-  themeColors.value = {
-    "--active-link-clr":
-      useColorMode().value === "light" ? "rgba(0,0,0,0.6)" : "#54b689",
-  };
-  watch(
-    () => useColorMode().value,
-    (current) => {
-      themeColors.value = {
-        "--active-link-clr":
-          useColorMode().value === "light" ? "rgba(0,0,0,0.6)" : "#54b689",
-      };
-    },
-  );
-
-  watch(route, () => {
-    console.log("finding bug on deployment");
+watch(
+  () => useColorMode().value,
+  (current) => {
+    themeColors.value = {
+      "--active-link-clr":
+        useColorMode().value === "light" ? "rgba(0,0,0,0.6)" : "#54b689",
+    };
+  },
+);
+watch(
+  () => route.fullPath,
+  async () => {
     if (menuOpen.value && process.client) {
       menuOpen.value = false;
     }
-  });
-}
+  },
+);
 
 onMounted(() => {
   setTimeout(() => {
     if (process.client) loading.value = false;
   }, 2000);
 });
+
+if (process.client) {
+  themeColors.value = {
+    "--active-link-clr":
+      useColorMode().value === "light" ? "rgba(0,0,0,0.6)" : "#54b689",
+  };
+}
 </script>
 
 <template>
@@ -56,7 +57,7 @@ onMounted(() => {
       <div class="relative sm:min-w-[280px]">
         <client-only>
           <section
-            :class="{ 'menu-hide': !menuOpen, 'menu-open': menuOpen }"
+            :class="[menuOpen ? 'menu-open' : 'menu-hide']"
             :style="{
               '--thumb-clr':
                 useColorMode().value === 'dark' ? '#35404e' : '#43926e',
@@ -320,6 +321,14 @@ onMounted(() => {
 </template>
 
 <style>
+.menu-open {
+  @apply max-h-[1044px];
+}
+
+.menu-hide {
+  @apply max-h-[80px];
+}
+
 .icons-enter-active,
 .icons-leave-active {
   transition: all 0.5s ease;
