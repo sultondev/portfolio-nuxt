@@ -3,7 +3,7 @@
   <component name="com.github.texhnolyzze.jiraworklogplugin.JiraWorklogPluginState">
     <option name="closed" value="true" />
     <option name="lastBranch" value="fix/upgrade" />
-    <option name="timers" value="{&quot;fix/upgrade&quot;:{&quot;total&quot;:2104605296600,&quot;updatedAtSinceEpoch&quot;:1702034481.780992900,&quot;paused&quot;:true}}" />
-    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;fix/upgrade&quot;,&quot;started&quot;:1702022980.022970100,&quot;duration&quot;:0.0},{&quot;branch&quot;:&quot;fix/upgrade&quot;,&quot;started&quot;:1702032359.857864000,&quot;duration&quot;:64.053324700},{&quot;branch&quot;:&quot;fix/upgrade&quot;,&quot;started&quot;:1702032450.776603900,&quot;duration&quot;:2040.551971900}]" />
+    <option name="timers" value="{&quot;main&quot;:{&quot;total&quot;:2790431869300,&quot;updatedAtSinceEpoch&quot;:1704260061.167124400,&quot;paused&quot;:true},&quot;fix/upgrade&quot;:{&quot;total&quot;:275060366000,&quot;updatedAtSinceEpoch&quot;:1704347027.373672600,&quot;paused&quot;:true}}" />
+    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;main&quot;,&quot;started&quot;:1704220570.838323900,&quot;duration&quot;:2755.434062300},{&quot;branch&quot;:&quot;main&quot;,&quot;started&quot;:1704260028.448135600,&quot;duration&quot;:34.997807000},{&quot;branch&quot;:&quot;fix/upgrade&quot;,&quot;started&quot;:1704346754.117486400,&quot;duration&quot;:275.060366000}]" />
   </component>
 </project>
