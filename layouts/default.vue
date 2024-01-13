@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import {SpeedInsights} from "@vercel/speed-insights/nuxt"
 import DSeparator from "~/components/UI/DSeparator.vue";
 import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "../.nuxt/imports";
@@ -49,6 +50,7 @@ if (process.client) {
 
 <template>
   <div class="">
+    <SpeedInsights/>
     <Loading :is-loading="loading"/>
     <div
         :class="{ 'max-h-screen overflow-hidden': loading }"
