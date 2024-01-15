@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="com.github.texhnolyzze.jiraworklogplugin.JiraWorklogPluginState">
-    <option name="closed" value="true" />
-    <option name="lastBranch" value="fix/upgrade" />
-    <option name="timers" value="{&quot;main&quot;:{&quot;total&quot;:2790431869300,&quot;updatedAtSinceEpoch&quot;:1704260061.167124400,&quot;paused&quot;:true},&quot;fix/upgrade&quot;:{&quot;total&quot;:275060366000,&quot;updatedAtSinceEpoch&quot;:1704347027.373672600,&quot;paused&quot;:true}}" />
-    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;main&quot;,&quot;started&quot;:1704220570.838323900,&quot;duration&quot;:2755.434062300},{&quot;branch&quot;:&quot;main&quot;,&quot;started&quot;:1704260028.448135600,&quot;duration&quot;:34.997807000},{&quot;branch&quot;:&quot;fix/upgrade&quot;,&quot;started&quot;:1704346754.117486400,&quot;duration&quot;:275.060366000}]" />
+    <option name="lastBranch" value="nuxt/version" />
+    <option name="timers" value="{&quot;analytics/upgrade&quot;:{&quot;total&quot;:24647741590400,&quot;updatedAtSinceEpoch&quot;:1705129975.870130000,&quot;paused&quot;:true},&quot;nuxt/version&quot;:{&quot;total&quot;:2590493836000,&quot;updatedAtSinceEpoch&quot;:1705350690.853672200,&quot;paused&quot;:false}}" />
+    <option name="timeSeries" value="[{&quot;branch&quot;:&quot;nuxt/version&quot;,&quot;started&quot;:1705135389.634556700,&quot;duration&quot;:1755.356474600}]" />
   </component>
 </project>
