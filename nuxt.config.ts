@@ -28,6 +28,11 @@ export default defineNuxtConfig({
 		quality: 80,
 
 	},
+	runtimeConfig: {
+		public: {
+			API_HOST: process.env.API_HOST
+		}
+	},
 	i18n: {
 		lazy: false,
 		langDir: 'lang',

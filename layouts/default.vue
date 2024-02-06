@@ -237,6 +237,19 @@ if (process.client) {
                       </span>
                     </nuxt-link>
                     <nuxt-link
+                        :to="localePath('/fake')"
+                        aria-label="fake page"
+                        class="nav-links__item"
+                    >
+                      <Icon
+                          class="text-[20px] ml-0.5 mr-2"
+                          name="fa6-solid:blog"
+                      />
+                      <span class="text-lg font-semibold">
+                        fake
+                      </span>
+                    </nuxt-link>
+                    <nuxt-link
                         :to="localePath('/contacts')"
                         aria-label="contacts page"
                         class="nav-links__item"
