@@ -12,3 +12,4 @@ yarn.lock
 .idea
 .code
 .vscode
+pnpm-lock.yaml
