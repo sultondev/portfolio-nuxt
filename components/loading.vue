@@ -41,17 +41,6 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style>
 
-.logo-container {
-  @apply w-full transition-all duration-1000 h-screen fixed top-0 left-0 flex justify-center items-center bg-black;
-}
-
-.logo-hidden {
-  @apply opacity-0 invisible;
-}
-
-.logo-hidden #logo path{
-  @apply animate-none;
-}
 
 #logo path{
   animation: linear 1600ms show-up infinite;
