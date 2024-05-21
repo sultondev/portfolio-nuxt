@@ -2,6 +2,13 @@
 import TranslateModule from './modules/i18n'
 
 export default defineNuxtConfig({
+	sourcemap: {
+		server: true,
+		client: false
+	},
+	devtools: {
+		enabled: true
+	},
 	modules: [
 		TranslateModule,
 		'@nuxt/image',
@@ -26,7 +33,6 @@ export default defineNuxtConfig({
 	},
 	image: {
 		quality: 80,
-
 	},
 	i18n: {
 		lazy: false,

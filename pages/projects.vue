@@ -27,13 +27,13 @@ useSeoMeta({
         <div class="text-center px-4">
           <div class="w-fit mx-auto">
             <h6 class="text-3xl dark:text-textLight font-bold mb-2 text-textDark">
-              {{ $t('my_projects')}}
+              {{ t('my_projects') }}
             </h6>
             <p class="dark:text-grayLight text-pDark text-base text-center md:max-w-[92%] mx-auto mb-4">
-              {{$t('projects_substring')}}
+              {{ t('projects_substring') }}
             </p>
 
-            <DNuxtLink arial-label="check my services" path="/service" :message="$t('hire_me')" class="hire__link hover:!bg-primaryHover bg-primary block w-fit mx-auto px-4" :classes="[linkDefaulClasses]">
+            <DNuxtLink arial-label="check my services" path="/service" :message="t('hire_me')" class="hire__link hover:!bg-primaryHover bg-primary block w-fit mx-auto px-4" :classes="[linkDefaulClasses]">
               <Icon name="cib:telegram-plane" class="mr-2" />
             </DNuxtLink>
           </div>
@@ -45,7 +45,6 @@ useSeoMeta({
 
       <div class="grid xl:grid-cols-2 place-items-center w-full">
         <FtProjectCard v-for="project in projects" :thumbnail="project.thumbnail" :name="project.name" :link_to_project="project.link_to_project" :description="project[locale]" class="min-w-full md:px-4 md:py-4 sm:p-4 py-2" />
-
 
       </div>
     </div>
