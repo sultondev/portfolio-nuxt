@@ -3,7 +3,7 @@ import TranslateModule from './modules/i18n'
 
 export default defineNuxtConfig({
 	sourcemap: {
-		server: true,
+		server: false,
 		client: false
 	},
 	devtools: {
