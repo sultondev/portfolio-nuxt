@@ -1,5 +1,5 @@
-<script>
-
+<script setup lang="ts">
+const currentYear = ref(new Date().getFullYear())
 
 </script>
 
@@ -11,7 +11,7 @@
     <div class="flex flex-wrap justify-center items-center">
       <Icon name="ri:copyright-fill" class="text-primary mx-1" />
       <p class="mx-1 dark:text-whiteGray text-sm">
-        Copyright 2023.
+        Copyright {{ currentYear }}.
       </p>
       <div class="flex flex-wrap justify-center">
         <p class="mx-1 dark:text-whiteGray text-sm">

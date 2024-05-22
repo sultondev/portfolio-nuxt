@@ -4,7 +4,6 @@ import { linkDefaulClasses } from "~/constants/UI/DNuxtLink";
 import {projects} from "~/constants/index"
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import FtProjectCard from "~/components/Cards/FtProjectCard.vue";
-import {useI18n} from "#imports";
 
 
 

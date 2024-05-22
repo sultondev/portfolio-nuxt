@@ -178,6 +178,7 @@ if (process.client) {
                       class="nav flex flex-col lg:min-w-fit min-w-[260px] gap-3 mb-6"
                   >
                     <nuxt-link
+                        active-class="active-link"
                         :to="localePath('/')"
                         aria-label="main page"
                         class="nav-links__item"
@@ -191,6 +192,7 @@ if (process.client) {
                       </span>
                     </nuxt-link>
                     <nuxt-link
+                        active-class="active-link"
                         :to="localePath('/projects')"
                         aria-label="projects page"
                         class="nav-links__item"
@@ -204,6 +206,7 @@ if (process.client) {
                       </span>
                     </nuxt-link>
                     <nuxt-link
+                        active-class="active-link"
                         :to="localePath('/service')"
                         aria-label="service and pricing page"
                         class="nav-links__item"
@@ -214,6 +217,7 @@ if (process.client) {
                       </span>
                     </nuxt-link>
                     <nuxt-link
+                        active-class="active-link"
                         :to="localePath('/resume')"
                         aria-label="resume page"
                         class="nav-links__item"
@@ -224,6 +228,7 @@ if (process.client) {
                       </span>
                     </nuxt-link>
                     <nuxt-link
+                        active-class="active-link"
                         :to="localePath('/blog')"
                         aria-label="blog page"
                         class="nav-links__item"
@@ -237,6 +242,7 @@ if (process.client) {
                       </span>
                     </nuxt-link>
                     <nuxt-link
+                        active-class="active-link"
                         :to="localePath('/contacts')"
                         aria-label="contacts page"
                         class="nav-links__item"
@@ -328,7 +334,7 @@ if (process.client) {
   </div>
 </template>
 
-<style>
+<style scoped>
 
 
 .icons-enter-active,
@@ -340,6 +346,11 @@ if (process.client) {
 .icons-leave-to {
   opacity: 0;
   transform: scale(0.6);
+}
+
+.active-link {
+  @apply dark:text-primary
+  text-gray-800;
 }
 
 </style>

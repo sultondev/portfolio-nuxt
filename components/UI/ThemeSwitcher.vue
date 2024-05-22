@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useColorMode} from "#imports";
+
 function switchTheme() {
   useColorMode().preference = useColorMode().value === 'dark' ? 'light' : 'dark'
 }

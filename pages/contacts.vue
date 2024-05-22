@@ -5,7 +5,6 @@ import DTextarea from "~/components/UI/DTextarea.vue";
 import DDropdownSelect from "~/components/UI/DDropdownSelect.vue";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
-import { useI18n} from "#imports";
 import DButton from "~/components/UI/DButton.vue";
 const {t} = useI18n()
 
@@ -48,7 +47,7 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
         <div class="text-center px-4">
           <div class="w-fit mx-auto">
             <h6 class="text-3xl dark:text-textLight font-bold mb-2 text-textDark">
-              {{ $t('my_contacts')}}
+              {{ t('my_contacts')}}
             </h6>
 
             <i18n-t
@@ -64,7 +63,7 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
             </i18n-t>
 
             <p class="dark:text-grayLight text-pDark text-base text-center md:max-w-[74%] mb-3 mx-auto">
-              {{$t('contact_follow')}}
+              {{t('contact_follow')}}
             </p>
 
             <div class="flex lg:w-full justify-between md:max-w-[240px] md:justify-between max-w-[240px] mx-auto px-3">
@@ -88,20 +87,20 @@ function updateSubmitData(value: string, fieldName?: 'fullname' | 'email' | 'pac
 
     <div class="py-20">
       <div class="md:max-w-[600px] sm:max-w-[520px] 2xs:max-w-[400px] xs:max-w-[300px] mx-w-[90%] mx-auto">
-        <DInput :label="$t('full_name')" update-field-name="fullname" @update:value="updateSubmitData" class="mx-auto mb-16" type="text">
+        <DInput :label="t('full_name')" update-field-name="fullname" @update:value="updateSubmitData" class="mx-auto mb-16" type="text">
         </DInput>
 
-        <DInput :label="$t('email')" update-field-name="email" @update:value="updateSubmitData" class="mx-auto mb-14" type="text">
+        <DInput :label="t('email')" update-field-name="email" @update:value="updateSubmitData" class="mx-auto mb-14" type="text">
         </DInput>
 
-        <DDropdownSelect class="mx-auto mb-4" :options="packageOptions" :placeholder="$t('package_select')" @update:value="updateSubmitData" update-field-name="package" />
-        <DNuxtLink arial-label="check my services" :path="localePath('/service')" :message="$t('package_hard_select')" class="block text-center mb-16" :classes="[linkDefaulClasses]">
+        <DDropdownSelect class="mx-auto mb-4" :options="packageOptions" :placeholder="t('package_select')" @update:value="updateSubmitData" update-field-name="package" />
+        <DNuxtLink arial-label="check my services" :path="localePath('/service')" :message="t('package_hard_select')" class="block text-center mb-16" :classes="[linkDefaulClasses]">
 
         </DNuxtLink>
 
-        <DTextarea :label="$t('message')" value="" class="mx-auto mb-12" @update:value="updateSubmitData" update-field-name="message" />
+        <DTextarea :label="t('message')" value="" class="mx-auto mb-12" @update:value="updateSubmitData" update-field-name="message" />
 
-        <DButton :message="$t('send_message')" class="md:px-14 sm:px-8 px-4 font-semibold mx-auto">
+        <DButton :message="t('send_message')" class="md:px-14 sm:px-8 px-4 font-semibold mx-auto">
 
         </DButton>
       </div>

@@ -10,7 +10,6 @@ import FtProjectCard from "~/components/Cards/FtProjectCard.vue";
 import BlogItemCard from "~/components/Cards/BlogItemCard.vue";
 
 import { btnDefaultClasses, linkDefaulClasses } from "~/constants/UI/DNuxtLink";
-import { useNuxtApp } from "#imports";
 
 const { locale, t } = useI18n();
 const main = useMainStore();

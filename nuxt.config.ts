@@ -19,6 +19,13 @@ export default defineNuxtConfig({
 		'nuxt-icon',
 		'@vueuse/nuxt',
 	],
+	app: {
+		rootId: 'sa',
+		buildAssetsDir: 'sa',
+		head: {
+			titleTemplate: '%s | SULTONDEV',
+		},
+	},
 	colorMode: {
 		preference: "dark",
 		fallback: 'dark',
@@ -28,7 +35,6 @@ export default defineNuxtConfig({
 		cssPath: '~/assets/css/tailwind.css',
 		configPath: 'tailwind.config.ts',
 		exposeConfig: false,
-		injectPosition: 0,
 		viewer: true,
 	},
 	image: {

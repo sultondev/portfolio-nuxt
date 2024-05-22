@@ -2,7 +2,7 @@
 const props = withDefaults(
     defineProps<{
       src: string | null
-      alt: string
+      alt?: string
       width?: number
       height?: number
       class?: { [key: string]: string } | string[] | string
@@ -34,7 +34,7 @@ const {
   <NuxtImg
       :src="src"
       :style="{ visibility: !src ? 'hidden' : 'visible' }"
-      :alt="alt"
+      :alt="alt || ''"
       :class="props.class"
       :loading="lazy ? 'lazy' : 'eager'"
       :width="width"

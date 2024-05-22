@@ -2,12 +2,12 @@
 
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
-import {useI18n} from "#imports";
+
 import DTable from "~/components/UI/DTable.vue";
 import FaqCard from "~/components/Cards/FaqCard.vue";
 
 
-const {locale, t} = useI18n()
+const { t } = useI18n()
 
 const metaTitle = ref(t('portfolio_meta_service_title'))
 

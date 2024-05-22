@@ -3,8 +3,6 @@
 
 import {watch} from 'vue';
 
-import {useI18n, ref} from "#imports";
-
 interface Option {
   value: string;
   label: string;
@@ -17,11 +15,15 @@ interface Props {
   selectFieldName?: string
   placeholderFieldName?: string
   closeAfterSelect?: boolean
-  updateFieldName?: string
+  updateFieldName: string
 }
 
+// Record Emits {
+//   'update:value': (value: string) => void;
+// }
+
 interface Emits {
-  'update:value': (value: string) => void;
+  (e: 'update:value', val: string, val2: string): void
 }
 
 const {t} = useI18n()
@@ -36,7 +38,7 @@ const emits = defineEmits<Emits>();
 const selectedOption = ref(props.defaultValue || {});
 
 const handleSelectChange = () => {
-  emits('update:value', selectedOption.value, props.updateFieldName);
+  emits('update:value', selectedOption.value?.label, props.updateFieldName);
 };
 
 type DropdownClickHandler = () => void;
