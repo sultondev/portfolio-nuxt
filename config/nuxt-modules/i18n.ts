@@ -8,7 +8,7 @@ export default defineNuxtModule({
         nuxt.hook('i18n:registerModule', (register: any) => {
             register({
                 // langDir path needs to be resolved
-                langDir: resolve('../lang'),
+                langDir: resolve('../../lang'),
                 locales: [
                     {
                         code: 'en',
