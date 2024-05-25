@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import DSeparator from "~/components/UI/DSeparator.vue";
 import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
-import {useColorMode} from "../.nuxt/imports";
+import {useColorMode} from "#imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
 
-const {locale, availableLocales, strategy} = useI18n();
+const {locale, availableLocales} = useI18n();
 const menuOpen = ref(false);
 const themeColors: any = ref(null);
 const route = useRoute();
@@ -35,7 +35,7 @@ watch(
 
 onMounted(() => {
   setTimeout(() => {
-    if (process.client) loading.value = false;
+    loading.value = false;
   }, 2000);
 });
 

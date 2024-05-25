@@ -39,5 +39,5 @@ useServerSeoMeta({
 </template>
 
 <style lang="sass">
-@import "./assets/css/root.sass"
+@import "assets/css/root"
 </style>

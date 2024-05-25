@@ -1,29 +1,38 @@
-import { createResolver, defineNuxtModule } from '@nuxt/kit'
+import '@nuxtjs/i18n'
+import type { NuxtConfig } from 'nuxt/config'
 
-export default defineNuxtModule({
-    async setup(options, nuxt) {
-        const { resolve } = createResolver(import.meta.url)
+const locales = [
+    {
+        code: 'en',
+        iso: 'en',
+        file: 'en.json',
+    },
+    {
+        code: 'ru',
+        iso: 'ru',
+        file: 'ru.json',
+    },
+    {
+        code: 'uz',
+        iso: 'uz',
+        file: 'uz.json',
+    },
+]
 
-        // @ts-ignore
-        nuxt.hook('i18n:registerModule', (register: any) => {
-            register({
-                // langDir path needs to be resolved
-                langDir: resolve('../../lang'),
-                locales: [
-                    {
-                        code: 'en',
-                        file: 'en.json',
-                    },
-                    {
-                        code: 'ru',
-                        file: 'ru.json',
-                    },
-                    {
-                        code: 'uz',
-                        file: 'uz.json',
-                    },
-                ]
-            })
-        })
-    }
-})
+export const i18nOptions: NuxtConfig['i18n'] = {
+    langDir: 'locales/',
+    defaultLocale: 'en',
+    locales,
+    // detectBrowserLanguage: {
+    //     useCookie: true,
+    //     cookieKey: 'AX_CAPITAL_LOCALIZATION',
+    //     alwaysRedirect: true,
+    // },
+    skipSettingLocaleOnNavigate: false,
+    types: 'composition',
+    strategy: 'prefix_except_default',
+    debug: false,
+    vueI18n: 'src/locales/vueI18n.ts',
+}
+
+export const [i18n]: NuxtConfig['modules'] = [['@nuxtjs/i18n', i18nOptions]]

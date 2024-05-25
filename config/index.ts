@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import TranslateModule from './nuxt-modules/i18n'
+import modules from "./nuxt-modules"
 import {noscript as seoNoscript, scripts as seoScripts} from './head/seo'
 import {scripts} from './head/head-tags'
 export default defineNuxtConfig({
@@ -10,16 +10,26 @@ export default defineNuxtConfig({
 	devtools: {
 		enabled: true
 	},
-	modules: [
-		TranslateModule,
-		'@nuxt/image',
-		'@nuxtjs/tailwindcss',
-		'@nuxtjs/color-mode',
-		'@pinia/nuxt',
-		'@nuxtjs/i18n',
-		'nuxt-icon',
-		'@vueuse/nuxt',
+	modules,
+	srcDir: 'src/',
+	routeRules: {
+		'/**': {
+			swr: false,
+			cache: false,
+		},
+	},
+	imports: {
+		dirs: ['composable/**', 'store/**', 'api/'],
+	},
+	components: [
+		{
+			path: '~/components',
+			pathPrefix: false,
+		}
 	],
+	// delayHydration: {
+	// 	mode: 'mount',
+	// },
 	app: {
 		rootId: 'sa',
 		buildAssetsDir: 'sa',
@@ -47,7 +57,7 @@ export default defineNuxtConfig({
 	},
 	i18n: {
 		lazy: false,
-		langDir: 'lang',
+		langDir: 'locales',
 		locales: [
 			{
 				code: 'en',
