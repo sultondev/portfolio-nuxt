@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import ImgWrapper from "~/components/UI/ImgWrapper.vue";
-
+type Props = {
+  title: string
+}
+withDefaults(defineProps<Props>(),{
+  title: 'title'
+})
 </script>
 
 <template>
-  <div class="w-screen h-screen">
-    <ImgWrapper :src="thumbnail" class="gradient-img  md:w-[165px] md:h-[185px] 2xs:w-[342px] 2xs:h-[230px] w-full object-cover " />
+  <div class="w-full h-full flex flex-col items-center">
+    <ImgWrapper src="assets/banners/coming_soon.svg"
+                class="w-2/4 h-2/4 mb-4" />
+    <h1 class="2xl:text-4xl text-2xl dark:text-grayLight">
+      {{ title }}
+    </h1>
   </div>
 </template>

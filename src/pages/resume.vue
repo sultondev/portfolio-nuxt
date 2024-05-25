@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ComingSoon from "~/components/ComingSoon.vue";
+
 const {t} = useI18n()
 const metaTitle = ref(t('portfolio_meta_resume_title'))
 
@@ -10,7 +12,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="">
-    resume
+  <div class="flex-1 flex justify-center items-center">
+    <ComingSoon title="This page is under development" />
   </div>
 </template>
