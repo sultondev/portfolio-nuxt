@@ -4,6 +4,7 @@ import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
 import {useColorMode} from "#imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import {linkDefaulClasses} from "~/constants/UI/DNuxtLink";
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 const {locale, availableLocales} = useI18n();
 const menuOpen = ref(false);
@@ -48,6 +49,7 @@ if (process.client) {
 </script>
 
 <template>
+  <SpeedInsights />
   <div class="">
     <Loading :is-loading="loading"/>
     <div
