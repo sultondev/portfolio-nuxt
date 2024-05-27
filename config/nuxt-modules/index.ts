@@ -16,6 +16,5 @@ export default [
   "@pinia/nuxt",
   "nuxt-icon",
   "@vueuse/nuxt",
-  "@nuxtjs/eslint-module",
   // threeJs,
 ] as NuxtConfig["modules"];
