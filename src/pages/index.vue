@@ -18,6 +18,7 @@ const { counter, doubleCounter } = storeToRefs(main);
 const { $intersectionAnimation } = useNuxtApp();
 
 const metaTitle = ref(t("portfolio_meta_about_title"));
+const { isMobile } = useDevice();
 
 useSeoMeta({
   title: metaTitle.value,

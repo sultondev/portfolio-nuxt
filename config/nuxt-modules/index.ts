@@ -1,5 +1,6 @@
 import type { NuxtConfig } from "@nuxt/schema";
 import { i18n } from "./i18n";
+import { device } from "./device";
 
 export default [
   // eslint,
@@ -10,6 +11,7 @@ export default [
   // '@nuxtjs/device',
   // '@vueuse/nuxt',
   i18n,
+  device,
   "@nuxt/image",
   "@nuxtjs/tailwindcss",
   "@nuxtjs/color-mode",
