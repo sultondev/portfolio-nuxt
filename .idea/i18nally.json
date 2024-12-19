@@ -1,13 +1,13 @@
 {
   "version" : "1.2",
   "profiles" : [ {
-    "id" : "183423d3-c095-4d5e-a0ca-9fa7045c2da3",
+    "id" : "909305f5-4503-442f-aa58-e40077134eac",
     "name" : "Vue-i18n",
     "keyNamingPattern" : "CAMEL_CASE_PATTERN",
     "sink" : {
-      "id" : "d9d289c6-c55c-461c-a335-352218693e84",
+      "id" : "dfaad362-a3e4-4ec0-897c-1698b3aec33a",
       "type" : "namespaced",
-      "translationsDirectory" : "$PROJECT_DIR$/lang",
+      "translationsDirectory" : "$PROJECT_DIR$/src/locales",
       "fileType" : "json",
       "defaultLocale" : "en",
       "namespaces" : [ "messages" ],
@@ -16,19 +16,19 @@
       "placeholderFormatterName" : "ICU"
     },
     "sources" : [ {
-      "id" : "5c30f533-e6d7-493c-a52c-2a481bf5a8d8",
+      "id" : "6f768903-00a2-48dd-b14b-817c39172a5b",
       "type" : "js",
+      "defaultReplacementTemplate" : "$t('%key%', %map%)",
       "scopeName" : "Project Files",
       "scopePattern" : "",
-      "defaultReplacementTemplate" : "$t('%key%', %map%)",
       "recognizedReplacementTemplates" : [ ],
       "skipDefaultNamespace" : false
     }, {
-      "id" : "4a772a31-3776-4533-920c-3d61d778bce9",
+      "id" : "0a277e64-4add-4994-82c3-9c09b48674ca",
       "type" : "htmlvue",
+      "defaultReplacementTemplate" : "$t('%key%', %map%)",
       "scopeName" : "Project Files",
       "scopePattern" : "",
-      "defaultReplacementTemplate" : "$t('%key%', %map%)",
       "attributeReplacementTemplate" : "",
       "inlineTagsReplacementTemplate" : "",
       "recognizedReplacementTemplates" : [ ],

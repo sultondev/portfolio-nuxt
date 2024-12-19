@@ -11,7 +11,7 @@ type Props = {
 };
 
 const props = withDefaults(defineProps<Props>(), {
-  thumbnail: "https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.svg",
+  thumbnail: "https://nestjs.com/img/nest-og.png",
   title: "Getting started with Node JS",
   brief_text:
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam aspernatur commodi cum cupiditate delectus deleniti distinctio illo impedit ipsam, iusto neque obcaecati officiis possimus praesentium sed voluptas? Eveniet, quibusdam",
@@ -25,7 +25,12 @@ const props = withDefaults(defineProps<Props>(), {
   >
     <img class="w-full object-fill h-[170px]" :src="thumbnail" alt="" />
     <div class="lg:p-5 p-4">
-      <DNuxtLink path="/blog" class="mb-4 block text-xl text-primary">
+      <DNuxtLink
+        :arial-label="title"
+        path="/blog"
+        :message="title"
+        class="mb-4 block text-xl text-primary truncate"
+      >
         {{ title }}
       </DNuxtLink>
       <div
