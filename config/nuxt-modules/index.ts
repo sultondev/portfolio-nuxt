@@ -1,6 +1,7 @@
 import type { NuxtConfig } from "@nuxt/schema";
 import { i18n } from "./i18n";
 import { device } from "./device";
+import { threeJs } from "./three-js";
 
 export default [
   // eslint,
@@ -18,5 +19,5 @@ export default [
   "@pinia/nuxt",
   "nuxt-icon",
   "@vueuse/nuxt",
-  // threeJs,
+  threeJs,
 ] as NuxtConfig["modules"];
