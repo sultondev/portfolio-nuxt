@@ -28,6 +28,9 @@
   "my_projects": "Projects",
   "my_resume": "Resume (CV)",
   "my_service_pricing": "Services & Pricing",
+  "names": {
+    "me": "Sultankhan Ablakulav"
+  },
   "not_found_back": "GO BACK",
   "not_found_home": "RETURN TO THE HOMEPAGE",
   "not_found_output_first": "The page you are looking for might have been removed, had its name changed or is temporarily unavailable.",

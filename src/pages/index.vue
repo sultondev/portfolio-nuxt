@@ -39,7 +39,7 @@ onMounted(() => {
             <h6
               class="text-5xl dark:text-textLight font-bold mb-2 text-textDark"
             >
-              Sultonkhan Ablakulav
+              {{ t("names.me") }}
             </h6>
             <p class="dark:text-grayLight text-pDark text-2xl mb-4">
               Front-End developer

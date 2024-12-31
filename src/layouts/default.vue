@@ -7,7 +7,7 @@ import { linkDefaulClasses } from "~/constants/UI/DNuxtLink";
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 import SnowingEffect from "~/components/SnowingEffect.vue";
 
-const { locale, availableLocales } = useI18n();
+const { locale, availableLocales, t } = useI18n();
 const menuOpen = ref(false);
 const themeColors: any = ref(null);
 const route = useRoute();
@@ -97,7 +97,7 @@ await useApiFetch<{ content: string }>("/quotes/random", {
               <h6
                 class="text-[22px] text-center lg:mb-3 font-bold text-white whitespace-nowrap"
               >
-                Sultonkhan Ablakulav
+                {{ t("names.me") }}
               </h6>
             </div>
             <div :class="[{ 'menu-open': menuOpen }]" class="menu-content">
