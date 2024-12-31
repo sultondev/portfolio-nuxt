@@ -9,6 +9,8 @@
 //   }
 // });
 
+import { $fetch } from "ofetch";
+
 const { scene: model } = await useGLTF("3d-models/sultondev.glb");
 </script>
 
