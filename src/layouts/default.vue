@@ -1,17 +1,18 @@
 <script lang="ts" setup>
 import DSeparator from "~/components/UI/DSeparator.vue";
 import ThemeSwitcher from "~/components/UI/ThemeSwitcher.vue";
-import { useColorMode } from "#imports";
+import { useApiFetch, useColorMode } from "#imports";
 import DNuxtLink from "~/components/UI/DNuxtLink.vue";
 import { linkDefaulClasses } from "~/constants/UI/DNuxtLink";
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 import SnowingEffect from "~/components/SnowingEffect.vue";
 
-const { locale, availableLocales } = useI18n();
+const { locale, availableLocales, t } = useI18n();
 const menuOpen = ref(false);
 const themeColors: any = ref(null);
 const route = useRoute();
 const loading = ref(true);
+const quote = ref("");
 
 function toggle() {
   menuOpen.value = !menuOpen.value;
@@ -47,6 +48,18 @@ if (process.client) {
       useColorMode().value === "light" ? "rgba(0,0,0,0.6)" : "#54b689",
   };
 }
+
+await useApiFetch<{ content: string }>("/quotes/random", {
+  server: false,
+  query: {
+    lang: locale,
+  },
+  onResponse: (ctx) => {
+    if (ctx.response._data?.content) {
+      quote.value = ctx.response._data?.content;
+    }
+  },
+});
 </script>
 
 <template>
@@ -84,7 +97,7 @@ if (process.client) {
               <h6
                 class="text-[22px] text-center lg:mb-3 font-bold text-white whitespace-nowrap"
               >
-                Sultonkhan Ablakulav
+                {{ t("names.me") }}
               </h6>
             </div>
             <div :class="[{ 'menu-open': menuOpen }]" class="menu-content">
@@ -112,7 +125,7 @@ if (process.client) {
                     class="font-light relative max-w-[260px] mx-auto lg:max-w-full mb-8 text-center text-white before:content-[''] before:block before:w-[2px] before:h-[100%] before:bg-white before:absolute before:l-[4px]"
                   >
                     <span class="px-1 block w-[100%]">
-                      We should never surrender
+                      {{ quote }}
                     </span>
                   </p>
                   <div
