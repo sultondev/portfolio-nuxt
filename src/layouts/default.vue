@@ -12,7 +12,6 @@ const menuOpen = ref(false);
 const themeColors: any = ref(null);
 const route = useRoute();
 const loading = ref(true);
-const quote = ref("");
 
 function toggle() {
   menuOpen.value = !menuOpen.value;
@@ -48,18 +47,6 @@ if (process.client) {
       useColorMode().value === "light" ? "rgba(0,0,0,0.6)" : "#54b689",
   };
 }
-
-await useApiFetch<{ content: string }>("/quotes/random", {
-  server: false,
-  query: {
-    lang: locale,
-  },
-  onResponse: (ctx) => {
-    if (ctx.response._data?.content) {
-      quote.value = ctx.response._data?.content;
-    }
-  },
-});
 </script>
 
 <template>
@@ -125,7 +112,7 @@ await useApiFetch<{ content: string }>("/quotes/random", {
                     class="font-light relative max-w-[260px] mx-auto lg:max-w-full mb-8 text-center text-white before:content-[''] before:block before:w-[2px] before:h-[100%] before:bg-white before:absolute before:l-[4px]"
                   >
                     <span class="px-1 block w-[100%]">
-                      {{ quote }}
+                      {{ t("quotes.solve") }}
                     </span>
                   </p>
                   <div

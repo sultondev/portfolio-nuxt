@@ -90,5 +90,12 @@
   "summary_projects": "loyihalarimni",
   "summary_resume": "rezyume",
   "tech_support": "Malum bir muddatga texnik yordam",
-  "welcome": "Hush kelibsiz"
+  "welcome": "Hush kelibsiz",
+  "quote_hunt": "Ov qil yoki ovlan",
+  "quotes": {
+    "solve": "O'rgan, tushun, tuzat va rivojlan",
+    "man": "Bola boshqalarni ayblaydi, erkak esa o'zini ayblaydi",
+    "life_cycle": "WakeUp(), Eat(), Code(), Workout(), Sleep(), Repeat()",
+    "mistakes": "Xatolarni qilish va biror narsa qilish hech narsa qilmaslikdan yaxshiroq"
+  }
 }

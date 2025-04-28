@@ -90,5 +90,12 @@
   "summary_projects": "projects",
   "summary_resume": "resume",
   "tech_support": "Time-limited tech support",
-  "welcome": "Hi"
+  "welcome": "Hi",
+  "quote_hunt": "Hunt or be hunted",
+  "quotes": {
+    "solve": "Learn, Understand, fix and improve",
+    "man": "A boy will blame other, while man blames himself",
+    "life_cycle":  "WakeUp(), Eat(), Code(), Workout(), Sleep(), Repeat()",
+    "mistakes": "It is better to make mistakes and do something than doing nothing at all"
+  }
 }
