@@ -190,7 +190,7 @@ const servicesData = ref<ServiceType[]>([
   },
 ])
 const packageNames = ref<PackageTranslateNamesType>({basic: "service_plan_basic", standard: "service_plan_standard",premium: "service_plan_premium", gold: "service_plan_gold"})
-const packagePrices = ref({basic: "$200", standard: "$2000",premium: "$3800+", gold: "$5200+"})
+const packagePrices = ref({basic: "$1000", standard: "$2900",premium: "$5200+", gold: "$+8400"})
 const packegesDetails = ref({basic: "service_details_basic", standard: "service_details_standard",premium: "service_details_premium", gold: "service_details_gold"})
 const serviceNumData = ref([
   {
